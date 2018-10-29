@@ -63,6 +63,7 @@
 
 ### Preferred Requirements:
 *"Preferred requirements" refer to requirements that may or may not be implemented in the final code, and are not required to reach "minimum viable product," but are nevertheless desirable (should-haves)*
+
 10. **Selectable difficulty level:** players can choose from multiple difficulty levels which will change which questions are asked in the game.
 
 11. **Listen for users to "buzz in:"** rather than simply alternating users, the software could listen for keypresses and allow users to "buzz in" to see who can answer the question more quickly (similar to Jeopardy!)
