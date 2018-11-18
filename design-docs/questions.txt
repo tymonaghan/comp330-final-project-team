@@ -8,3 +8,4 @@ Which year was "Mexico" most mentioned? 1846, James Polk; 2018, Donald Trump; 19
 Which year is "terrorism" first mentioned? 1967 (Johnson), 2001 (W Bush), 1985 (Reagan)?
 Who wrote their addresses at the highest reading level? Obama, Clinton, or W Bush?
 Which SOTU is represented by this wordcloud [https://github.com/tymonaghan/trivia-of-the-union/raw/master/design-docs/images/wordcloud-1862.png] Lincoln 1862, Obama 2012, Nixon 1970?
+Which president spoke the words: "Juntos podemos—together we can" in their first SOTU address? Obama, George W Bush, John F Kennedy?
