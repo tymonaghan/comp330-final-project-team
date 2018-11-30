@@ -2,8 +2,6 @@ import java.io.*;
 
 public class QuestionFiles {
 
-    public static void main(String [] args) {
-
         // The name of the file to open.
         String fileName = "design-docs/questions.txt";
 
