@@ -1,38 +1,55 @@
 import java.io.*;
 
-public class QuestionFiles {
+public class QuestionFiles{
+
+        private String fileName;
+
+        QuestionFiles(String fileName)
+        {
+            this.fileName = fileName;
+        }
 
 
 
         // The name of the file to open.
-        String fileName = "../content/questions.txt";
 
         // This will reference one line at a time
-        String line = null;
 
-        try {
-            // FileReader reads text files in the default encoding.
-            FileReader fileReader =
-                    new FileReader(fileName);
+        public void getFile()
+        {
+                String line = null;
 
-            // Wrap FileReader in BufferedReader.
-            BufferedReader bufferedReader =
-                    new BufferedReader(fileReader);
+                try {
+                    // FileReader reads text files in the default encoding.
+                    FileReader fileReader =
+                            new FileReader(fileName);
 
-            while((line = bufferedReader.readLine()) != null) {
-                System.out.println(line);
-            }
+                    // Wrap FileReader in BufferedReader.
+                    BufferedReader bufferedReader =
+                            new BufferedReader(fileReader);
 
-            // Close file.
-            bufferedReader.close();
+                    while((line = bufferedReader.readLine()) != null) {
+                        System.out.println(line);
+                    }
+
+                    // Close file.
+                    bufferedReader.close();
+                }
+                catch(FileNotFoundException ex) {
+                    System.out.println(
+                            "Unable to open file '" + fileName + "'");
+                }
+                catch(IOException ex) {
+                    System.out.println(
+                            "Error reading file '" + fileName + "'");
+                }
         }
-        catch(FileNotFoundException ex) {
-            System.out.println(
-                    "Unable to open file '" + fileName + "'");
+
+        public void switchPath(String path)
+        {
+            fileName = path;
         }
-        catch(IOException ex) {
-            System.out.println(
-                    "Error reading file '" + fileName + "'");
-        }
+
+        
     }
 
