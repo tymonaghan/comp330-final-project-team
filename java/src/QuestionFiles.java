@@ -2,7 +2,7 @@ import java.io.*;
 
 public class QuestionFiles {
 
-    public static void main(String [] args) {
+
 
         // The name of the file to open.
         String fileName = "../content/questions.txt";
@@ -35,4 +35,4 @@ public class QuestionFiles {
                     "Error reading file '" + fileName + "'");
         }
     }
-}
+
