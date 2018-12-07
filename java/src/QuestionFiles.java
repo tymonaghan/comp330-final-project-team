@@ -1,13 +1,10 @@
 import java.io.*;
+import java.util.Scanner;
 
 public class QuestionFiles{
 
         private String fileName;
 
-        QuestionFiles(String fileName)
-        {
-            this.fileName = fileName;
-        }
 
 
 
@@ -17,32 +14,16 @@ public class QuestionFiles{
 
         public void getFile()
         {
-                String line = null;
-
-                try {
-                    // FileReader reads text files in the default encoding.
-                    FileReader fileReader =
-                            new FileReader(fileName);
-
-                    // Wrap FileReader in BufferedReader.
-                    BufferedReader bufferedReader =
-                            new BufferedReader(fileReader);
-
-                    while((line = bufferedReader.readLine()) != null) {
-                        System.out.println(line);
-                    }
-
-                    // Close file.
-                    bufferedReader.close();
+            try {
+                Scanner scanner = new Scanner(new File(fileName));
+                while (scanner.hasNextLine()) {
+                    //System.out.println(scanner.nextLine());
+                   // System.out.println()
                 }
-                catch(FileNotFoundException ex) {
-                    System.out.println(
-                            "Unable to open file '" + fileName + "'");
-                }
-                catch(IOException ex) {
-                    System.out.println(
-                            "Error reading file '" + fileName + "'");
-                }
+                scanner.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
         }
 
         public void switchPath(String path)
