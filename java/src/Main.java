@@ -6,25 +6,23 @@ import java.io.DataInputStream;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Main{
-    public static void main(String[] args){
-        try{
-            File file = new File("/Users/ivankavanagh/Desktop/questions.txt");
-            System.out.println(file.getCanonicalPath());
-            FileInputStream ft = new FileInputStream(file);
+public class Main {
+    private int difficulty;
+    public static void main(String[] args) {
 
-            DataInputStream in = new DataInputStream(ft);
-            BufferedReader br = new BufferedReader(new InputStreamReader(in));
-            String strline;
+        host myHost = new host();
+        myHost.displayIntro();
+        Scanner scanner = new Scanner(System.in);
+        int ans = scanner.nextInt();
+        myHost.setDifficulty(ans);
+        QuestionFiles qf = new QuestionFiles("/Users/ivankavanagh/Desktop/" + myHost.getDifficulty());
+        qf.ReadFromFile();
 
-            while((strline = br.readLine()) != null){
-                System.out.println(strline);
-            }
-            in.close();
-        }catch(Exception e){
-            System.err.println("Error: " + e.getMessage());
-        }
+
+
+
     }
+
 }
 
 

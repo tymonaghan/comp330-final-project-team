@@ -1,36 +1,63 @@
 import java.io.*;
-import java.util.Scanner;
 
-public class QuestionFiles{
+public class QuestionFiles {
 
-        private String fileName;
-
-
+    private String fileURL;
+    private String line = null;
 
 
-        // The name of the file to open.
-
-        // This will reference one line at a time
-
-        public void getFile()
-        {
-            try {
-                Scanner scanner = new Scanner(new File(fileName));
-                while (scanner.hasNextLine()) {
-                    //System.out.println(scanner.nextLine());
-                   // System.out.println()
-                }
-                scanner.close();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
+            QuestionFiles(String fileUrl)
+            {
+                this.fileURL = fileUrl;
             }
-        }
 
-        public void switchPath(String path)
-        {
-            fileName = path;
-        }
 
-        
-    }
+
+
+            public void ReadFromFile()
+            {
+
+                try {
+                    // FileReader reads text files in the default encoding.
+                    FileReader fileReader =
+                            new FileReader(fileURL);
+
+                    // Always wrap FileReader in BufferedReader.
+                    BufferedReader bufferedReader =
+                            new BufferedReader(fileReader);
+
+                    while((line = bufferedReader.readLine()) != null) {
+                        System.out.println(line);
+                    }
+
+                    // Always close files.
+                    bufferedReader.close();
+                }
+                catch(FileNotFoundException ex) {
+                    System.out.println(
+                            "Unable to open file '" +
+                                    fileURL + "'");
+                }
+                catch(IOException ex) {
+                    System.out.println(
+                            "Error reading file '"
+                                    + fileURL + "'");
+                    // Or we could just do this:
+                    // ex.printStackTrace();
+                }
+            }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
