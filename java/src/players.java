@@ -12,15 +12,19 @@ public class players
     Queue players;
 
 
-    public void players()
+    public void players(int numPlayers)
     {
-
+        this.numPlayers = numPlayers;
     }
+
 
 
     public void instantiatePlayers()
     {
-
+            for(int i = 0; i < numPlayers; i++)
+            {
+                players.add("Player " + Integer.toString(i));
+            }
     }
 
 
@@ -36,6 +40,11 @@ public class players
     }
 
     public void skipTurn()
+    {
+
+    }
+
+    public void leaveGame()
     {
 
     }

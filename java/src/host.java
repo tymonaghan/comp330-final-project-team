@@ -2,6 +2,7 @@ public class host
 {
 
     private String difficulty;
+    private int time;
     private int level;
 
 
@@ -45,20 +46,29 @@ public class host
         if(level == 1)
         {
             difficulty = "easy.txt";
+            time = 100000;
         }
         else if(level == 2)
         {
             difficulty = "medium.txt";
+            time = 30000;
         }
         else if(level == 3)
         {
             difficulty = "hard.txt";
+            time = 30000;
+
         }
     }
 
     public String getDifficulty()
     {
         return difficulty;
+    }
+
+    public int getTime()
+    {
+        return time;
     }
 
 
