@@ -9,14 +9,17 @@ public class players
     private int numPlayers;
     private int curPlayer;
     private int prevPlayer;
+    Queue players;
+
+
+    public void players()
+    {
+
+    }
 
 
     public void instantiatePlayers()
     {
-
-
-
-
 
     }
 
