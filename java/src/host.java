@@ -17,8 +17,9 @@ public class host
         System.out.println("3: hard");
     }
 
-    public void askQuestion(){
-        System.out.println("This is question one. Answer it!");
+    public void askQuestion(QuestionFiles qf, int lineNo){
+        System.out.println("Player X, here is your question:");
+        qf.ReadFromFile(lineNo);
     }
 
     public void playAgain()

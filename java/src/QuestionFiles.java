@@ -27,8 +27,9 @@ public class QuestionFiles {
                             new BufferedReader(fileReader);
 
 
-                    for(int i = 0; i < lineNo; ++i)
+                    for(int i = 0; i < lineNo; ++i) {
                         bufferedReader.readLine();
+                    }
                     String lineString = bufferedReader.readLine();
                     System.out.println(lineString);
                     //String lineString;
@@ -52,6 +53,7 @@ public class QuestionFiles {
                             "Error reading file '"
                                     + fileURL + "'");
                     // Or we could just do this:
+                    // tm: why not both?
                     // ex.printStackTrace();
                 }
             }
