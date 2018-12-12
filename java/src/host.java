@@ -10,13 +10,16 @@ public class host
     {
         //enter intro here
         System.out.println("\n\n\n\n\n\n\n\n\n\n\nWelcome to 'Trivia of the Union,' the State of the Union quiz game.");
-        System.out.println("Please Select a difficulty");
+        System.out.println("Questions will cover State of the Union Addresses from 1981-2017.");
+        System.out.println("\nPlease Select a difficulty");
         System.out.println("1: easy");
         System.out.println("2: medium");
         System.out.println("3: hard");
     }
 
-
+    public void askQuestion(){
+        System.out.println("This is question one. Answer it!");
+    }
 
     public void playAgain()
     {

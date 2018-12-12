@@ -4,7 +4,7 @@ What is the most frequent word across all SOTUs (excluding stopwords like "the,"
 Which appears most often: "taxes," "god," or "war?"
 Which president said: "This is our new American moment. There has never been a better time to start living the American Dream."
 Which appears most often: "Mexico," "Iraq," or "Afghanistan?"
-Which year was "Mexico" most mentioned? 1997 - Bill Clinton, 2017 - Donald Trump, 1982 - Ronald Reagan
-Which year is "terrorism" first mentioned? 1967 (Johnson), 2001 (W Bush), 1985 (Reagan)?
-Who wrote their addresses at the highest reading level? Obama, Clinton, or W Bush?
-Which president spoke the words: "Juntos podemos—together we can" in their first SOTU address? Obama, W Bush, Clinton?
+Which year was "Mexico" most mentioned?
+Which year is "terrorism" first mentioned?
+Who wrote their addresses at the highest reading level?
+Which president spoke the words: "Juntos podemos—together we can" in their first SOTU address?
