@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8c326ee-095e-4fe2-9608-607191f46eeb" name="Default Changelist" comment="myHost.askQuestion now returns the question on line no questionNumber">
+    <list default="true" id="a8c326ee-095e-4fe2-9608-607191f46eeb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/QuestionFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/QuestionFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/host.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/host.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,7 +37,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2704" />
+          <entry key="JAVA" value="2740" />
           <entry key="PLAIN_TEXT" value="353" />
         </counts>
       </usages-collector>
@@ -53,8 +50,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/java/src/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="86">
-                  <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+                <state relative-caret-position="120">
+                  <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -168,7 +165,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544651483078" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544651502736" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -232,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544646432580</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="myHost.askQuestion now returns the question on line no questionNumber">
+      <created>1544651514172</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544651514172</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -246,7 +250,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.15708502" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -257,15 +260,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4631579" visible="true" weight="0.48608536" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.45991904" visible="true" weight="0.48608536" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49959514" weight="0.39888683" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49959514" weight="0.3283859" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5368421" side_tool="true" visible="true" weight="0.48608536" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.54008096" side_tool="true" weight="0.48608536" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4534413" weight="0.35435992" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.45101213" weight="0.35435992" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -315,8 +318,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/java/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        <state relative-caret-position="120">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
