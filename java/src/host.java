@@ -21,6 +21,13 @@ public class host
         System.out.println("Player X, here is your question:");
         qf.ReadFromFile(lineNo);
     }
+    public void giveChoices(QuestionFiles choices, int lineNo){
+        System.out.println("Since level = easy, here are your choices:");
+        String choicez = choices.ReadFromFile(lineNo);
+    }
+
+    //public void getPlayerResponse(){
+    //}
 
     public void playAgain()
     {
@@ -76,8 +83,7 @@ public class host
         return time;
     }
 
-
-
+    public int getLevel() { return level; }
 
 
 

@@ -1,6 +1,4 @@
 import java.io.*;
-import java.nio.charset.Charset;
-import java.nio.file.Path;
 
 
 public class QuestionFiles {
@@ -14,7 +12,7 @@ public class QuestionFiles {
                 this.fileURL = fileUrl;
             }
 
-            public void ReadFromFile(int lineNo)
+            public String ReadFromFile(int lineNo)
             {
 
                 try {
@@ -56,6 +54,7 @@ public class QuestionFiles {
                     // tm: why not both?
                     // ex.printStackTrace();
                 }
+                return null;
             }
 }
 

@@ -27,8 +27,20 @@ public class Main {
         QuestionFiles qf = new QuestionFiles("java/src/content/questions/" + myHost.getDifficulty());
         // reads out the file - good for testing but not for release:
         //qf.ReadFromFile(3);
-        int questionNumber=5; // replace this with the current round/turn # to cycle through questions in sequence
+
+        //set questionNumber and ask that question
+        int questionNumber=2; // replace this with the current round/turn # to cycle through questions in sequence
         myHost.askQuestion(qf, questionNumber); // myHost asks the question on line number questionNumber
+        if (myHost.getLevel() == 0){
+            QuestionFiles choices = new QuestionFiles("java/src/content/easyChoices/choices.txt");
+            myHost.giveChoices(choices, questionNumber);
+        }
+        //myHost.getPlayerResponse();
+
+        scanner.nextLine();
+        String response = scanner.nextLine();
+        System.out.println(response);
+
 
 
 
