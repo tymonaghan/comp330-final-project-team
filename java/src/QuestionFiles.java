@@ -1,4 +1,7 @@
 import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.file.Path;
+
 
 public class QuestionFiles {
 
@@ -11,10 +14,7 @@ public class QuestionFiles {
                 this.fileURL = fileUrl;
             }
 
-
-
-
-            public void ReadFromFile()
+            public void ReadFromFile(int lineNo)
             {
 
                 try {
@@ -26,9 +26,19 @@ public class QuestionFiles {
                     BufferedReader bufferedReader =
                             new BufferedReader(fileReader);
 
-                    while((line = bufferedReader.readLine()) != null) {
-                        System.out.println(line);
+
+                    for(int i = 0; i < lineNo; ++i) {
+                        bufferedReader.readLine();
                     }
+                    String lineString = bufferedReader.readLine();
+                    System.out.println(lineString);
+                    //String lineString;
+                    //lineString = bufferedReader.readAllLines().get(lineNo);
+                    //System.out.println(lineString);
+
+                    //while((line = bufferedReader.readLine()) != null) {
+                    //    System.out.println(line);
+                    //}
 
                     // Always close files.
                     bufferedReader.close();
@@ -43,6 +53,7 @@ public class QuestionFiles {
                             "Error reading file '"
                                     + fileURL + "'");
                     // Or we could just do this:
+                    // tm: why not both?
                     // ex.printStackTrace();
                 }
             }
