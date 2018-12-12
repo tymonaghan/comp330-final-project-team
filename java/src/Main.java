@@ -26,7 +26,7 @@ public class Main {
         myHost.setDifficulty(ans);
         QuestionFiles qf = new QuestionFiles("java/src/content/questions/" + myHost.getDifficulty());
         // reads out the file - good for testing but not for release:
-        //qf.ReadFromFile();
+        qf.ReadFromFile(2);
 
         myHost.askQuestion();
 
