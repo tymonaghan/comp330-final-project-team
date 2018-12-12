@@ -1,3 +1,5 @@
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Random;
 import java.util.Scanner;
 import java.io.File;
@@ -13,9 +15,14 @@ public class Main {
         host myHost = new host();
         myHost.displayIntro();
         Scanner scanner = new Scanner(System.in);
+
+        Path currentRelativePath = Paths.get("");
+        String s = currentRelativePath.toAbsolutePath().toString();
+        System.out.println("Current relative path is: " + s);
+        
         int ans = scanner.nextInt();
         myHost.setDifficulty(ans);
-        QuestionFiles qf = new QuestionFiles("/Users/ivankavanagh/Desktop/" + myHost.getDifficulty());
+        QuestionFiles qf = new QuestionFiles("java/src/content/questions/" + myHost.getDifficulty());
         qf.ReadFromFile();
 
 
