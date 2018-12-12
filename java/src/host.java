@@ -9,6 +9,7 @@ public class host
     public void displayIntro()
     {
         //enter intro here
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\nWelcome to 'Trivia of the Union,' the State of the Union quiz game.");
         System.out.println("Please Select a difficulty");
         System.out.println("1: easy");
         System.out.println("2: medium");

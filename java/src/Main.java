@@ -19,10 +19,11 @@ public class Main {
         Path currentRelativePath = Paths.get("");
         String s = currentRelativePath.toAbsolutePath().toString();
         System.out.println("Current relative path is: " + s);
-        
+
         int ans = scanner.nextInt();
         myHost.setDifficulty(ans);
         QuestionFiles qf = new QuestionFiles("java/src/content/questions/" + myHost.getDifficulty());
+        // reads out the file - good for testing but not for release:
         qf.ReadFromFile();
 
 
