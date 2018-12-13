@@ -5,6 +5,20 @@ public class Host
     private String difficulty;
     private int time;
     private int level;
+    private int questionNumber;
+
+    public void incrementQuestionNumber() {
+        this.questionNumber++;
+    }
+
+    public void resetQuestionNumber(){
+        this.questionNumber=0;
+    }
+
+    public int getQuestionNumber() {
+        return questionNumber;
+    }
+
 
 
     public void displayWelcome(){
@@ -22,7 +36,16 @@ public class Host
         System.out.println("4: Explain the difficulty options");
     }
 
+    public void explainDifficultyOptions(){
+        System.out.println("\n\nTrivia-of-the-Union Difficulty Options:\n" +
+                (char)27 + "[32mEasy" + (char)27 +"[0m provides 3 choices for each question and a generous timer. \n" +
+                (char)27 + "[33mMedium" + (char)27 + "[0m provides 3 choices for each question and a short timer. \n" +
+                (char)27 + "[31mHard" + (char)27 + "[0m requires users to type their answers (no multiple choice) and has a fast timer.");
+
+    }
+
     public void askPlayerNumber(){
+        //this currently has no effect on the game itself
         System.out.println("Select 1 or 2 players? (press 1 or 2 key)");
     }
 
@@ -39,6 +62,7 @@ public class Host
     public void playAgain()
     {
         //prompt second game
+        System.out.println("Would you like to play again? Press 1 for yes, 2 to quit.");
 
     }
 
@@ -81,7 +105,7 @@ public class Host
     public void declareWinner()
     {
         //declare a winner given threshold is met
-        System.out.println("Would you like to play again(Y/N)");
+        System.out.println("\n\nThe game is over! I should declare a winner but I don't know how yet.");
     }
 
     public void setDifficulty(int level)
@@ -117,5 +141,8 @@ public class Host
     public int getLevel() { return level; }
 
 
-
+    public void quitGame() {
+        System.out.println("Thanks for playing! Goodbye.");
+                System.exit(0);
+    }
 }
