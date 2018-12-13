@@ -1,7 +1,7 @@
-Reagan, Clinton, H.W. Bush
-Reagan, Obama, Clinton
+1. Reagan, 2. Clinton, 3. H.W. Bush
+1. Reagan, 2. Obama, 3. Clinton
 1. "People", 2. "Government", 3. "American"
-"Taxes","God","War"
+1. "Taxes", 2. "God", 3. "War"
 Trump, Reagan, Obama
 Mexico, Iraq, Afghanistan
 1997, 2017, 1982

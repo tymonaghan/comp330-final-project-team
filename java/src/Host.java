@@ -1,6 +1,7 @@
 public class Host
 {
 
+
     private String difficulty;
     private int time;
     private int level;
@@ -26,11 +27,12 @@ public class Host
     }
 
     public void askQuestion(QuestionFiles qf, int lineNo){
-        System.out.println("Player X, here is your question:");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); //simulate clear console
+        System.out.println("Player X, here is your question:" + (char)27 + "[33m");
         qf.ReadFromFile(lineNo);
     }
     public void giveChoices(QuestionFiles choices, int lineNo){
-        System.out.println("Since level = easy, here are your choices:");
+        System.out.println((char)27 + "[0mSince level = easy, here are your choices:");
         String choicez = choices.ReadFromFile(lineNo);
     }
 
@@ -40,12 +42,36 @@ public class Host
 
     }
 
-    public void evaluateQuestion()
-    {
-        //evaluate question
+    public void evaluateQuestion(QuestionFiles af, int lineNo, QuestionFiles choices, int usersResponse) {
+        System.out.println("\nyour response: " + usersResponse);
+        //choices.ReadFromFile(lineNo); trying to use regex matching to print the actual WORD of the usersResponse, not the int (without switching everything over to HashMaps or something
+        System.out.println("the correct answer is: " +(char)27 + "[32m");
+        String answerLine = af.ReadFromFile(lineNo);
 
-
+        //countdown to next question:
+        System.out.println((char)27 + "[0mNext question in");
+        for (int i = 4; i > 0; i--) {
+            System.out.print(i);
+            for (int j = 0; j < 5; j++) {
+                countdownToNextQuestion(j);
+            }
+        }
+        //trying to get this regex matching business to work
+        //final String regex = "(?<=(1. \"))[A-z]+(?=\")";
+        //final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
+        //final Matcher matcher = pattern.matcher(answerLine);
+        //while(matcher.find()){
+        //System.out.println(matcher.group(0));
     }
+    private void countdownToNextQuestion(int i){
+        try {
+            Thread.sleep(i+200);
+            System.out.print(" . ");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void givePoint()
     {

@@ -1,16 +1,9 @@
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Random;
 import java.util.Scanner;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.DataInputStream;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 public class Main {
     private int difficulty;
     public static void main(String[] args) {
+        int questionNumber=0;
         /* print working path:
         Path currentRelativePath = Paths.get("");
         String s = currentRelativePath.toAbsolutePath().toString();
@@ -42,26 +35,54 @@ public class Main {
         Players gamePlayers = new Players (ans); //instantiate gamePlayers with 1 or 2 numPlayers
         System.out.println("you selected " + gamePlayers.getNumPlayers() + " players"); //print back to user
 
-        //create qf questionFile and start asking:
-        QuestionFiles qf = new QuestionFiles("src/content/questions/" + myHost.getDifficulty());
-        int questionNumber=2; // replace this with the current round/turn # to cycle through questions in sequence
-        myHost.askQuestion(qf, questionNumber); // myHost asks the question on line number questionNumber
-        if (myHost.getLevel() == 0){ // if difficulty is easy, show 3x multiple choice options
-            QuestionFiles choices = new QuestionFiles("src/content/easyChoices/choices.txt");
-            myHost.giveChoices(choices, questionNumber);
+
+        //experimental while-wrapper:
+        while(questionNumber<9) {
+            //create qf questionFile and start asking:
+            QuestionFiles qf = new QuestionFiles("src/content/questions/" + myHost.getDifficulty());
+            QuestionFiles af = new QuestionFiles("src/content/answers/" + myHost.getDifficulty());
+            //int questionNumber=2; // replace this with the current round/turn # to cycle through questions in sequence
+            myHost.askQuestion(qf, questionNumber); // myHost asks the question on line number questionNumber
+
+
+            if (myHost.getLevel() == 0) { // if difficulty is easy, show 3x multiple choice options
+                QuestionFiles choices = new QuestionFiles("src/content/easyChoices/choices.txt");
+                myHost.giveChoices(choices, questionNumber);
+                //accept and evaluate user response: EASY and MEDIUM
+                scanner.nextLine();
+                int userResponse = scanner.nextInt();
+
+            /*
+            //trying to return the string that follows the user's selected # with regex, but having trouble
+            String filePath = "src/content/easyChoices/choices.txt";
+            File choicesFile = new File(filePath);
+            Scanner answerPickerOuter = null;
+            try {
+                answerPickerOuter = new Scanner(choicesFile);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            final String regex1 = System.lineSeparator();
+            final String regex = "[0-9]";
+            answerPickerOuter.useDelimiter(regex1);
+            System.out.println(answerPickerOuter.next());
+            answerPickerOuter.close();
+            */
+
+                myHost.evaluateQuestion(af, questionNumber, choices, userResponse);
+                questionNumber++;
+            }
         }
 
-        //accept and evaluate user response: EASY
-        scanner.nextLine();
-        String response = scanner.nextLine();
-        System.out.println(response);
 
+
+
+        //accept and evaluate user response: HARD
 
 
 
 
     }
-
 }
 
 
