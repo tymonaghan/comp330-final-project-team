@@ -49,14 +49,9 @@ public class Host
         System.out.println("Select 1 or 2 players? (press 1 or 2 key)");
     }
 
-    public void askQuestion(QuestionFiles qf, int lineNo){
+    public void askQuestion(QuestionFiles qf, int lineNo, Player player){
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); //simulate clear console
-        //hacky temporary way to show whether p1 or p2's turn - this currently isn't actually linked to anything in the Player class:
-        if (this.getQuestionNumber()%2 == 0) {
-            System.out.println("Player One, question #" + (this.getQuestionNumber() + 1) + " is for you:" + (char) 27 + "[33m");
-        } else{
-            System.out.println("Player Two, question #" + (this.getQuestionNumber() + 1) + " is for you:" + (char) 27 + "[33m");
-        }
+        System.out.println(player.getPlayerName() + ", question #" + (this.getQuestionNumber() + 1) + " is for you:" + (char) 27 + "[33m");
         qf.ReadFromFile(lineNo);
     }
     public void giveChoices(QuestionFiles choices, int lineNo){

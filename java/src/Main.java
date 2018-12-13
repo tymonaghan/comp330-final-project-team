@@ -30,15 +30,12 @@ public class Main {
         myHost.setDifficulty(ans); //set difficulty according to user response
         System.out.println("Difficulty set to " + myHost.getDifficulty().replace(".txt","")); //print back to user, omitting ".txt"
 
+        //initialize players
         myHost.askPlayerNumber(); //ask 1 or 2 players?
         scanner.nextLine();
         ans = scanner.nextInt();
-        Player playerOne = new Player (true); //instantiate gamePlayers with 1 or 2 numPlayers
-        if (ans == 1){ //if 1-player game, playerTwo is not human (false)
-            Player playerTwo = new Player(false);
-        }else if (ans ==2){ //if it's a 2-player game, playerTwo is human (true)
-            Player playerTwo = new Player(true);
-        }
+        Player playerOne = new Player (); //instantiate gamePlayers with 1 or 2 numPlayers
+        Player playerTwo = new Player (ans);
         numPlayers=(ans);
         System.out.println("you selected " + numPlayers + " players"); //print back to user
 
@@ -47,7 +44,11 @@ public class Main {
             //create qf questionFile and start asking:
             QuestionFiles qf = new QuestionFiles("src/content/questions/" + myHost.getDifficulty());
             QuestionFiles af = new QuestionFiles("src/content/answers/" + myHost.getDifficulty());
-            myHost.askQuestion(qf, myHost.getQuestionNumber()); // myHost asks the question on line number questionNumber
+            if (myHost.getQuestionNumber()%2 == 0) {
+                myHost.askQuestion(qf, myHost.getQuestionNumber(), playerOne); // myHost asks the question on line number questionNumber
+            } else {
+                myHost.askQuestion(qf, myHost.getQuestionNumber(), playerTwo); // myHost asks the question on line number questionNumber
+            }
 
 
             if (myHost.getLevel() == 0) { // if difficulty is easy, show 3x multiple choice options
