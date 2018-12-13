@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddfc89cd-62e4-4895-a383-87a2853652a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Host.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Host.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -41,15 +40,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5916" />
-          <entry key="txt" value="349" />
+          <entry key="java" value="6423" />
+          <entry key="txt" value="459" />
           <entry key="xml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5916" />
-          <entry key="PLAIN_TEXT" value="349" />
+          <entry key="JAVA" value="6423" />
+          <entry key="PLAIN_TEXT" value="459" />
           <entry key="XML" value="13" />
         </counts>
       </usages-collector>
@@ -83,8 +82,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="354">
-                  <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
+                <state relative-caret-position="-1014">
+                  <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
                 </state>
               </provider>
             </entry>
@@ -120,8 +119,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Host.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-221">
-                  <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+                <state relative-caret-position="244">
+                  <caret line="79" column="73" selection-start-line="79" selection-start-column="73" selection-end-line="79" selection-end-column="73" />
                   <folding>
                     <element signature="e#191#192#0" expanded="true" />
                     <element signature="e#228#229#0" expanded="true" />
@@ -129,6 +128,10 @@
                     <element signature="e#287#288#0" expanded="true" />
                     <element signature="e#134#135#0" expanded="true" />
                     <element signature="e#171#172#0" expanded="true" />
+                    <element signature="e#4620#4621#0" expanded="true" />
+                    <element signature="e#4653#4654#0" expanded="true" />
+                    <element signature="e#4685#4686#0" expanded="true" />
+                    <element signature="e#4712#4713#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -183,8 +186,8 @@
         <option value="$PROJECT_DIR$/src/content/easyChoices/choices.txt" />
         <option value="$PROJECT_DIR$/src/Players.java" />
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/src/Host.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Host.java" />
       </list>
     </option>
   </component>
@@ -263,7 +266,7 @@
     <property name="SearchEverywhereHistoryKey" value="artifacts&#9;FILE&#9;jar://C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2018.2.4/lib/openapi.jar!/com/intellij/packaging/artifacts" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544729788934" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544730618691" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/java_jar" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -325,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544688833299</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fill out host functions like declaring end of game, asking to play again (doesn't work yet)">
+      <created>1544730052236</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544730052236</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -353,7 +363,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49938875" weight="0.26927504" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50488997" side_tool="true" visible="true" weight="0.27617952" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50488997" side_tool="true" weight="0.27617952" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49388754" weight="0.3785961" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -410,7 +420,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rename host and players classes to Host and Players. split and optimize interactive setup (difficulty, players) process" />
     <MESSAGE value="now uses int questionNumber to cycle through questions in order, displays correct answer, counts down to next question then continues." />
-    <option name="LAST_COMMIT_MESSAGE" value="now uses int questionNumber to cycle through questions in order, displays correct answer, counts down to next question then continues." />
+    <MESSAGE value="fill out host functions like declaring end of game, asking to play again (doesn't work yet)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fill out host functions like declaring end of game, asking to play again (doesn't work yet)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/packaging/artifacts/Artifact.class">
@@ -464,10 +475,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1014">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Host.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        <state relative-caret-position="244">
+          <caret line="79" column="73" selection-start-line="79" selection-start-column="73" selection-end-line="79" selection-end-column="73" />
           <folding>
             <element signature="e#191#192#0" expanded="true" />
             <element signature="e#228#229#0" expanded="true" />
@@ -475,14 +493,11 @@
             <element signature="e#287#288#0" expanded="true" />
             <element signature="e#134#135#0" expanded="true" />
             <element signature="e#171#172#0" expanded="true" />
+            <element signature="e#4620#4621#0" expanded="true" />
+            <element signature="e#4653#4654#0" expanded="true" />
+            <element signature="e#4685#4686#0" expanded="true" />
+            <element signature="e#4712#4713#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
         </state>
       </provider>
     </entry>

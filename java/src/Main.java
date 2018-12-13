@@ -4,7 +4,7 @@ public class Main {
 
     //private int difficulty;
     public static void main(String[] args) {
-        int questionLimit = 2;
+        int questionLimit = 4;
 
         /* print working path:
         Path currentRelativePath = Paths.get("");
@@ -69,7 +69,7 @@ public class Main {
 
                 myHost.evaluateQuestion(af, myHost.getQuestionNumber(), choices, userResponse);
                 myHost.incrementQuestionNumber();
-            }
+            } //end if-easy block
         } // end while(questionNumber < questionLimit) loop
 
         //handle end-of-game (not working yet)
@@ -79,22 +79,15 @@ public class Main {
             //scanner.nextLine();
             int userResponse = scanner.nextInt();
             if (userResponse == 1) { //if user wants to play again, reset questionNumber
-                myHost.resetQuestionNumber();
+                myHost.resetQuestionNumber(); // this doesn't work, exits with code 0
             } else {
-                myHost.quitGame();
+                myHost.quitGame(); //but this does work, shows message and then exits with code 0
             }
-        }
-
-
-
+        } // end while-loop for questionLimit reached (questionNum == questionLimit)
 
         //accept and evaluate user response: HARD
 
-
-
-
     }
-
 }
 
 

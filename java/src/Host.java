@@ -51,7 +51,12 @@ public class Host
 
     public void askQuestion(QuestionFiles qf, int lineNo){
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); //simulate clear console
-        System.out.println("Player X, here is your question:" + (char)27 + "[33m");
+        //hacky temporary way to show whether p1 or p2's turn - this currently isn't actually linked to anything in the Player class:
+        if (this.getQuestionNumber()%2 == 0) {
+            System.out.println("Player One, question #" + (this.getQuestionNumber() + 1) + " is for you:" + (char) 27 + "[33m");
+        } else{
+            System.out.println("Player Two, question #" + (this.getQuestionNumber() + 1) + " is for you:" + (char) 27 + "[33m");
+        }
         qf.ReadFromFile(lineNo);
     }
     public void giveChoices(QuestionFiles choices, int lineNo){
@@ -72,7 +77,7 @@ public class Host
         System.out.println("the correct answer is: " +(char)27 + "[32m");
         String answerLine = af.ReadFromFile(lineNo);
 
-        //countdown to next question:
+        //countdown to next question (should skip this when game is over):
         System.out.println((char)27 + "[0mNext question in");
         for (int i = 4; i > 0; i--) {
             System.out.print(i);
