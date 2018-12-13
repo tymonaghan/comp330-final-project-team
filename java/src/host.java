@@ -4,6 +4,7 @@ public class host
     private String difficulty;
     private int time;
     private int level;
+    private int threshold;
 
 
     public void displayIntro()
@@ -52,23 +53,32 @@ public class host
         {
             difficulty = "easy.txt";
             time = 100000;
+            threshold = 7;
         }
         else if(level == 2)
         {
             difficulty = "medium.txt";
             time = 30000;
+            threshold = 5;
         }
         else if(level == 3)
         {
             difficulty = "hard.txt";
             time = 30000;
-
+            threshold = 3;
         }
     }
 
-    public String getDifficulty()
+    public String getLevel()
     {
+
         return difficulty;
+    }
+
+
+    public int getthreshold()
+    {
+        return threshold;
     }
 
     public int getTime()

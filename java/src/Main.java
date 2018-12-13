@@ -24,7 +24,7 @@ public class Main {
 
         int ans = scanner.nextInt();
         myHost.setDifficulty(ans);
-        QuestionFiles qf = new QuestionFiles("java/src/content/questions/" + myHost.getDifficulty());
+        QuestionFiles qf = new QuestionFiles("java/src/content/questions/" + myHost.getLevel());
         // reads out the file - good for testing but not for release:
         //qf.ReadFromFile(3);
         int questionNumber=5; // replace this with the current round/turn # to cycle through questions in sequence
