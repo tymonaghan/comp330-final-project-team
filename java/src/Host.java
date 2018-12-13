@@ -1,4 +1,4 @@
-public class host
+public class Host
 {
 
     private String difficulty;
@@ -6,15 +6,23 @@ public class host
     private int level;
 
 
-    public void displayIntro()
-    {
-        //enter intro here
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\nWelcome to 'Trivia of the Union,' the State of the Union quiz game.");
+    public void displayWelcome(){
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); //simulate clear console
+        System.out.println("Welcome to 'Trivia of the Union,' the State of the Union quiz game.");
         System.out.println("Questions will cover State of the Union Addresses from 1981-2017.");
+    }
+    public void askDifficulty()
+    {
+
         System.out.println("\nPlease Select a difficulty");
-        System.out.println("1: easy");
-        System.out.println("2: medium");
-        System.out.println("3: hard");
+        System.out.println((char)27 + "[32m1: easy");
+        System.out.println((char)27 + "[33m2: medium");
+        System.out.println((char)27 + "[31m3: hard" + (char)27 + "[0m");
+        System.out.println("4: Explain the difficulty options");
+    }
+
+    public void askPlayerNumber(){
+        System.out.println("Select 1 or 2 players? (press 1 or 2 key)");
     }
 
     public void askQuestion(QuestionFiles qf, int lineNo){
@@ -25,9 +33,6 @@ public class host
         System.out.println("Since level = easy, here are your choices:");
         String choicez = choices.ReadFromFile(lineNo);
     }
-
-    //public void getPlayerResponse(){
-    //}
 
     public void playAgain()
     {

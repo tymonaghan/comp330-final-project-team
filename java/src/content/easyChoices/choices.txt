@@ -1,6 +1,6 @@
 Reagan, Clinton, H.W. Bush
 Reagan, Obama, Clinton
-"People", "Government", "American"
+1. "People", 2. "Government", 3. "American"
 "Taxes","God","War"
 Trump, Reagan, Obama
 Mexico, Iraq, Afghanistan

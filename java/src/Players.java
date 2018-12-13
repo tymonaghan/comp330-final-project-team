@@ -2,7 +2,7 @@ import java.util.Queue;
 
 
 
-public class players
+public class Players
 {
 
 
@@ -12,12 +12,12 @@ public class players
     Queue players;
 
 
-    public void players(int numPlayers)
+    public Players(int numPlayers)
     {
         this.numPlayers = numPlayers;
     }
 
-
+    public int getNumPlayers() { return numPlayers; }
 
     public void instantiatePlayers()
     {
