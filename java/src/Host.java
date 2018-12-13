@@ -110,7 +110,7 @@ public class Host
     public void declareWinner()
     {
         //declare a winner given threshold is met
-        System.out.println("\n\nThe game is over! I should declare a winner but I don't know how yet.");
+        System.out.println("\n\nThe game is over! I should declare a winner but I don't know how yet. It could even be a tie!");
     }
 
     public void setDifficulty(int level)

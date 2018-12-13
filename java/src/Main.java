@@ -5,6 +5,7 @@ public class Main {
     //private int difficulty;
     public static void main(String[] args) {
         int questionLimit = 4;
+        int numPlayers;
 
         /* print working path:
         Path currentRelativePath = Paths.get("");
@@ -32,8 +33,14 @@ public class Main {
         myHost.askPlayerNumber(); //ask 1 or 2 players?
         scanner.nextLine();
         ans = scanner.nextInt();
-        Players gamePlayers = new Players (ans); //instantiate gamePlayers with 1 or 2 numPlayers
-        System.out.println("you selected " + gamePlayers.getNumPlayers() + " players"); //print back to user
+        Player playerOne = new Player (true); //instantiate gamePlayers with 1 or 2 numPlayers
+        if (ans == 1){ //if 1-player game, playerTwo is not human (false)
+            Player playerTwo = new Player(false);
+        }else if (ans ==2){ //if it's a 2-player game, playerTwo is human (true)
+            Player playerTwo = new Player(true);
+        }
+        numPlayers=(ans);
+        System.out.println("you selected " + numPlayers + " players"); //print back to user
 
         //while there are still questions left to ask, ask them in sequence:
         while(myHost.getQuestionNumber()<questionLimit) {
