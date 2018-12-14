@@ -3,6 +3,7 @@ Player.java is the class for players of the game. Each player has a name, a coun
  */
 
 import java.util.Queue;
+import java.util.Scanner;
 
 public class Player
 {
@@ -20,6 +21,12 @@ public class Player
 
     public String getPlayerName() {
         return playerName;
+    }
+
+    public void promptForName(String num, Scanner scanner){
+        System.out.println("Player " + num + "Please enter your name:");
+        String nameInput=scanner.next();
+        playerName=nameInput;
     }
 
     public Player() //construct human playerOne (same every time)
@@ -44,8 +51,20 @@ public class Player
         roundsWon = 0;
     }
 
+    void printScore(){
+        System.out.println(playerName + "'s score: "+ questionsCorrect + " (out of " + questionsAttempted +" attempted)");
+    }
+
+    void addAttempt(){
+        questionsAttempted++;
+    }
+
     void addPoint(){
         questionsCorrect++;
+    }
+
+    boolean getHumanity(){
+        return isHuman;
     }
 
     public void sayAnswer()

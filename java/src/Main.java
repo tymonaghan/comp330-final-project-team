@@ -22,6 +22,10 @@ public class Main {
         Player playerTwo = new Player(ans);
         numPlayers = (ans);
         System.out.println("you selected " + numPlayers + " players"); //print back to user
+        playerOne.promptForName("One", scanner);
+        if (playerTwo.getHumanity()){
+            playerTwo.promptForName("Two", scanner);
+        }
 
         //set difficulty
         myHost.askDifficulty(); //ask user to select difficulty 1-3
