@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
 public class Host
 {
     private String difficulty;
+    private String regex;
     private int time;
     private int level;
     private int questionNumber;
@@ -58,48 +59,38 @@ public class Host
         String question=qf.ReadFromFile(lineNo);
         System.out.println(question);
     }
-    public void giveChoices(QuestionFiles choices, int lineNo){
-        String choicez = choices.ReadFromFile(lineNo);
-        System.out.println((char)27+"[0m" + choicez.replaceAll("\\*","\n"));
+    public void giveChoices(QuestionFiles choices, int lineNo){ //give player multiple choices (for easy + medium difficulty only)
+        String choicez = choices.ReadFromFile(lineNo); //read the line in choices file that corresponds to the question
+        System.out.println((char)27+"[0m" + choicez.replaceAll("\\*","\n")); //print out the options, each on their own line
     }
 
-    public void evaluateQuestion(QuestionFiles af, int lineNo, QuestionFiles choices, int usersResponse) {
-        String answerLine = af.ReadFromFile(lineNo);
-        String choiceLine = choices.ReadFromFile(lineNo);
-        final String regex ="(?<="+usersResponse+". )[^,\\n]+(?=[,\\n])";
-        final Pattern regexPattern = Pattern.compile(regex);
-        final Matcher matcher = regexPattern.matcher(choiceLine);
-
+    public void evaluateQuestion(QuestionFiles af, int lineNo, QuestionFiles choices, int usersResponse) { //assess whether the user answered the question correctly
+        String answerLine = af.ReadFromFile(lineNo); //read in the answer
+        String choiceLine = choices.ReadFromFile(lineNo); // read in the user's choice
+        if (usersResponse !=3){
+            this.regex = "(?<=" + usersResponse + "\\. )[^,\\n]+(?=[,$])"; //regex for user responses 1-2
+        } else if (usersResponse==3){
+            this.regex= "(?<=3\\. ).+$"; //regex for user response 3 (not sure why one didn't work for all
+        }
+        final Pattern regexPattern = Pattern.compile(regex, Pattern.MULTILINE); // compile regex into pattern
+        final Matcher matcher = regexPattern.matcher(choiceLine); //run the regex over the choiceLine
         while (matcher.find()) {
-            this.userMatchedAnswer=matcher.group(0);
+            this.userMatchedAnswer=matcher.group(0); //store users answer to userMatchesAnswer
         }
 
-        /*
-            System.out.println("Full match: " + matcher.group(0));
-            for (int i = 1; i <= matcher.groupCount(); i++) {
-                System.out.println("Group " + i + ": " + matcher.group(i));
-            }
-*/
-
-        System.out.println("\nyour response: " + userMatchedAnswer);
-
-        System.out.println("the correct answer is: " +(char)27 + "[32m");
+        System.out.println("\nyour response: \n" + (char)27 + "[32m" + userMatchedAnswer); //print back the users answer
+        System.out.println((char)27 + "[0mthe correct answer is: " +(char)27 + "[32m"); // print the correct answer
         System.out.print(answerLine);
 
         //countdown to next question (should skip this when game is over):
-        System.out.println((char)27 + "[0m\nNext question in");
+        System.out.println((char)27 + "[0m\n\nNext question in");
+        //this nested for-loop simply counts down from 4-0 until the next question by calling countdownToNextQuestion
         for (int i = 4; i > 0; i--) {
             System.out.print(i);
             for (int j = 0; j < 5; j++) {
                 countdownToNextQuestion(j);
             }
         }
-        //trying to get this regex matching business to work
-        //final String regex = "(?<=(1. \"))[A-z]+(?=\")";
-        //final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
-        //final Matcher matcher = pattern.matcher(answerLine);
-        //while(matcher.find()){
-        //System.out.println(matcher.group(0));
     }
     private void countdownToNextQuestion(int i){
         try {

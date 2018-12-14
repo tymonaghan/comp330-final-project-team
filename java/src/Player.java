@@ -7,7 +7,6 @@ import java.util.Queue;
 public class Player
 {
 
-
     private int numPlayers;
     private int curPlayer;
     private int prevPlayer;
@@ -45,22 +44,14 @@ public class Player
         roundsWon = 0;
     }
 
-
-    /* not using
-    public void instantiatePlayers()
-    {
-            for(int i = 0; i < numPlayers; i++)
-            {
-                players.add("Player " + Integer.toString(i));
-            }
+    void addPoint(){
+        questionsCorrect++;
     }
-    */
 
     public void sayAnswer()
     {
 
     }
-
 
     public void stealTurn()
     {

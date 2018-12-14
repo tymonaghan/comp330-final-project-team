@@ -43,18 +43,15 @@ public class Main {
             questionsAsked++;
         }
 
-
-        myHost.declareWinner();
-        myHost.playAgain();
-        //scanner.nextLine();
+        //end-of-round functions, when questionLimit is reached
+        myHost.declareWinner(); //announce the winner of the round
+        myHost.playAgain(); //ask whether to play again
+        scanner.nextLine();
         int userResponse = scanner.nextInt();
         if (userResponse == 1) { //if user wants to play again, reset questionNumber
             myHost.resetQuestionNumber(); // this doesn't work, exits with code 0 (even if it resets the number, triviaGame.run has come and gone by this point in main
         } else {
             myHost.quitGame(); //but this does work, shows message and then exits with code 0
         }
-
     }
 }
-
-

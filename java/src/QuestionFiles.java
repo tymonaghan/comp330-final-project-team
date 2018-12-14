@@ -2,8 +2,6 @@ import java.io.*;
 
 public class QuestionFiles {
 
-
-
     private String fileURL;
     private String line = null;
 
@@ -11,10 +9,6 @@ public class QuestionFiles {
             {
                 this.fileURL = fileUrl;
             }
-
-    public String getFileURL() {
-        return fileURL;
-    }
 
             public String ReadFromFile(int lineNo) {
                 String lineString = null;
@@ -27,21 +21,10 @@ public class QuestionFiles {
                     BufferedReader bufferedReader =
                             new BufferedReader(fileReader);
 
-
                     for (int i = 0; i < lineNo; ++i) {
                         bufferedReader.readLine();
                     }
                     lineString = bufferedReader.readLine();
-                    //commented out the below, because i want to use the return value and print that, in order to split tokens etc before printing
-                    //System.out.println(lineString);
-
-                    //String lineString;
-                    //lineString = bufferedReader.readAllLines().get(lineNo);
-                    //System.out.println(lineString);
-
-                    //while((line = bufferedReader.readLine()) != null) {
-                    //    System.out.println(line);
-                    //}
 
                     // Always close files.
                     bufferedReader.close();
@@ -57,21 +40,7 @@ public class QuestionFiles {
                     // tm: why not both?
                     // ex.printStackTrace();
                 }
-                //added return
+                //added return so I can get strings and manipulate them outside QuestionFiles class
                 return lineString;
             }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
