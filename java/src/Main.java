@@ -7,7 +7,6 @@ public class Main {
         int questionsAsked=0;
         int questionLimit = 4;
         int numPlayers;
-        int gameState = 0;
 
         // instantiate host, scanner
         Host myHost = new Host();
@@ -36,19 +35,21 @@ public class Main {
         myHost.setDifficulty(ans); //set difficulty according to user response
         System.out.println("Difficulty set to " + myHost.getDifficulty().replace(".txt", "")); //print back to user, omitting ".txt"
 
-        //instantiate new Game and play it:
+        //instantiate new Game...
         Game triviaGame = new Game();
-        while (questionsAsked<questionLimit) {
+        //and play it until the questionLimit is reached.
+        while (myHost.getQuestionNumber()<questionLimit) {
             triviaGame.play(myHost, scanner, playerOne, playerTwo);
             questionsAsked++;
         }
+
 
         myHost.declareWinner();
         myHost.playAgain();
         //scanner.nextLine();
         int userResponse = scanner.nextInt();
         if (userResponse == 1) { //if user wants to play again, reset questionNumber
-            myHost.resetQuestionNumber(); // this doesn't work, exits with code 0
+            myHost.resetQuestionNumber(); // this doesn't work, exits with code 0 (even if it resets the number, triviaGame.run has come and gone by this point in main
         } else {
             myHost.quitGame(); //but this does work, shows message and then exits with code 0
         }

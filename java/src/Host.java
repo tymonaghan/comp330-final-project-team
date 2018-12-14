@@ -1,7 +1,9 @@
+/*
+If Trivia of the Union were a game show, Host.java would be the host. Welcomes contestants, gathers names and other preferences, asks the questions, declares a winner, and says goodbye when the game is over.
+ */
+
 public class Host
 {
-
-
     private String difficulty;
     private int time;
     private int level;
@@ -18,8 +20,6 @@ public class Host
     public int getQuestionNumber() {
         return questionNumber;
     }
-
-
 
     public void displayWelcome(){
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); //simulate clear console

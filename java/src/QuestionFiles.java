@@ -1,11 +1,9 @@
 import java.io.*;
 
-
 public class QuestionFiles {
 
     private String fileURL;
     private String line = null;
-
 
             QuestionFiles(String fileUrl)
             {
@@ -14,7 +12,6 @@ public class QuestionFiles {
 
             public String ReadFromFile(int lineNo)
             {
-
                 try {
                     // FileReader reads text files in the default encoding.
                     FileReader fileReader =

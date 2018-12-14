@@ -1,6 +1,8 @@
+/*
+Player.java is the class for players of the game. Each player has a name, a count of questions asked and answered, and a boolean to say whether they are human or not.
+ */
+
 import java.util.Queue;
-
-
 
 public class Player
 {
