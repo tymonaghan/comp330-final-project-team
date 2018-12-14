@@ -21,7 +21,7 @@ public class Player
         return playerName;
     }
 
-    Player() //construct human playerOne (same every time)
+    public Player() //construct human playerOne (same every time)
     {
         isHuman = true;
         playerName = "Player Uno";
@@ -30,7 +30,7 @@ public class Player
         roundsWon = 0;
         //this.numPlayers = numPlayers;
     }
-    Player(int humanity){ //construct player two depending on 1 or 2-player game
+    public Player(int humanity){ //construct player two depending on 1 or 2-player game
         if (humanity==1){
             isHuman=false;
             playerName="computadora";
