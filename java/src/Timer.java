@@ -3,8 +3,8 @@ public class Timer
 
 
     private int UPPER_BOUND = 0;
-    host minTime = new host();
-    players player = new players();
+    Host minTime = new Host();
+    //Players player = new Players();
 
 
     private long currTime;
@@ -21,7 +21,7 @@ public class Timer
         this.currTime = System.currentTimeMillis();
         if(currTime > UPPER_BOUND)
         {
-            player.stealTurn();
+            //player.stealTurn();
         }
 
         else if(currTime < UPPER_BOUND)

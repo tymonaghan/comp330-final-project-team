@@ -1,20 +1,17 @@
 import java.io.*;
 
-
 public class QuestionFiles {
 
     private String fileURL;
     private String line = null;
-
 
             QuestionFiles(String fileUrl)
             {
                 this.fileURL = fileUrl;
             }
 
-            public String ReadFromFile(int lineNo)
-            {
-
+            public String ReadFromFile(int lineNo) {
+                String lineString = null;
                 try {
                     // FileReader reads text files in the default encoding.
                     FileReader fileReader =
@@ -24,29 +21,18 @@ public class QuestionFiles {
                     BufferedReader bufferedReader =
                             new BufferedReader(fileReader);
 
-
-                    for(int i = 0; i < lineNo; ++i) {
+                    for (int i = 0; i < lineNo; ++i) {
                         bufferedReader.readLine();
                     }
-                    String lineString = bufferedReader.readLine();
-                    System.out.println(lineString);
-                    //String lineString;
-                    //lineString = bufferedReader.readAllLines().get(lineNo);
-                    //System.out.println(lineString);
-
-                    //while((line = bufferedReader.readLine()) != null) {
-                    //    System.out.println(line);
-                    //}
+                    lineString = bufferedReader.readLine();
 
                     // Always close files.
                     bufferedReader.close();
-                }
-                catch(FileNotFoundException ex) {
+                } catch (FileNotFoundException ex) {
                     System.out.println(
                             "Unable to open file '" +
                                     fileURL + "'");
-                }
-                catch(IOException ex) {
+                } catch (IOException ex) {
                     System.out.println(
                             "Error reading file '"
                                     + fileURL + "'");
@@ -54,20 +40,7 @@ public class QuestionFiles {
                     // tm: why not both?
                     // ex.printStackTrace();
                 }
-                return null;
+                //added return so I can get strings and manipulate them outside QuestionFiles class
+                return lineString;
             }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
