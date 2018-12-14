@@ -2,12 +2,16 @@
 If Trivia of the Union were a game show, Host.java would be the host. Welcomes contestants, gathers names and other preferences, asks the questions, declares a winner, and says goodbye when the game is over.
  */
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Host
 {
     private String difficulty;
     private int time;
     private int level;
     private int questionNumber;
+    private String userMatchedAnswer;
 
     public void incrementQuestionNumber() {
         this.questionNumber++;
@@ -28,7 +32,6 @@ public class Host
     }
     public void askDifficulty()
     {
-
         System.out.println("\nPlease Select a difficulty");
         System.out.println((char)27 + "[32m1: easy");
         System.out.println((char)27 + "[33m2: medium");
@@ -45,35 +48,46 @@ public class Host
     }
 
     public void askPlayerNumber(){
-        //this currently has no effect on the game itself
+        //user's response controls how playerTwo is instantiated
         System.out.println("Select 1 or 2 players? (press 1 or 2 key)");
     }
 
     public void askQuestion(QuestionFiles qf, int lineNo, Player player){
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); //simulate clear console
         System.out.println(player.getPlayerName() + ", question #" + (this.getQuestionNumber() + 1) + " is for you:" + (char) 27 + "[33m");
-        qf.ReadFromFile(lineNo);
+        String question=qf.ReadFromFile(lineNo);
+        System.out.println(question);
     }
     public void giveChoices(QuestionFiles choices, int lineNo){
-        System.out.println((char)27 + "[0mSince level = easy, here are your choices:");
         String choicez = choices.ReadFromFile(lineNo);
-    }
-
-    public void playAgain()
-    {
-        //prompt second game
-        System.out.println("Would you like to play again? Press 1 for yes, 2 to quit.");
-
+        System.out.println((char)27+"[0m" + choicez.replaceAll("\\*","\n"));
     }
 
     public void evaluateQuestion(QuestionFiles af, int lineNo, QuestionFiles choices, int usersResponse) {
-        System.out.println("\nyour response: " + usersResponse);
-        //choices.ReadFromFile(lineNo); trying to use regex matching to print the actual WORD of the usersResponse, not the int (without switching everything over to HashMaps or something
-        System.out.println("the correct answer is: " +(char)27 + "[32m");
         String answerLine = af.ReadFromFile(lineNo);
+        String choiceLine = choices.ReadFromFile(lineNo);
+        final String regex ="(?<="+usersResponse+". )[^,\\n]+(?=[,\\n])";
+        final Pattern regexPattern = Pattern.compile(regex);
+        final Matcher matcher = regexPattern.matcher(choiceLine);
+
+        while (matcher.find()) {
+            this.userMatchedAnswer=matcher.group(0);
+        }
+
+        /*
+            System.out.println("Full match: " + matcher.group(0));
+            for (int i = 1; i <= matcher.groupCount(); i++) {
+                System.out.println("Group " + i + ": " + matcher.group(i));
+            }
+*/
+
+        System.out.println("\nyour response: " + userMatchedAnswer);
+
+        System.out.println("the correct answer is: " +(char)27 + "[32m");
+        System.out.print(answerLine);
 
         //countdown to next question (should skip this when game is over):
-        System.out.println((char)27 + "[0mNext question in");
+        System.out.println((char)27 + "[0m\nNext question in");
         for (int i = 4; i > 0; i--) {
             System.out.print(i);
             for (int j = 0; j < 5; j++) {
@@ -96,7 +110,6 @@ public class Host
         }
     }
 
-
     public void givePoint()
     {
         //assign point given correct answer
@@ -106,6 +119,13 @@ public class Host
     {
         //declare a winner given threshold is met
         System.out.println("\n\nThe game is over! I should declare a winner but I don't know how yet. It could even be a tie!");
+    }
+
+    public void playAgain()
+    {
+        //prompt second game
+        System.out.println("Would you like to play again? Press 1 for yes, 2 to quit.");
+
     }
 
     public void setDifficulty(int level)
