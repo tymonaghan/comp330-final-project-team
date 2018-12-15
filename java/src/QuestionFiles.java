@@ -1,16 +1,15 @@
 import java.io.*;
 
-public class QuestionFiles {
+class QuestionFiles {
 
     private String fileURL;
-    private String line = null;
 
             QuestionFiles(String fileUrl)
             {
                 this.fileURL = fileUrl;
             }
 
-            public String ReadFromFile(int lineNo) {
+            String ReadFromFile(int lineNo) {
                 String lineString = null;
                 try {
                     // FileReader reads text files in the default encoding.
