@@ -28,7 +28,7 @@
     <session id="-1504894709">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="4" />
@@ -42,7 +42,7 @@
           <entry key="class" value="1" />
           <entry key="java" value="22446" />
           <entry key="regexp" value="22" />
-          <entry key="txt" value="1474" />
+          <entry key="txt" value="1499" />
           <entry key="xml" value="13" />
         </counts>
       </usages-collector>
@@ -50,7 +50,7 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="JAVA" value="22446" />
-          <entry key="PLAIN_TEXT" value="1474" />
+          <entry key="PLAIN_TEXT" value="1499" />
           <entry key="RegExp" value="22" />
           <entry key="XML" value="13" />
         </counts>
@@ -257,7 +257,7 @@
     <property name="SearchEverywhereHistoryKey" value="artifacts&#9;FILE&#9;jar://C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2018.2.4/lib/openapi.jar!/com/intellij/packaging/artifacts" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544882752043" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544883169645" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last.edited.regexp" value="*1. Reagan, *2. Clinton, *3. H.W. Bush" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/java_jar" />
@@ -419,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544882682239</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="test deployment to apache">
+      <created>1544883168155</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1544883168155</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -436,9 +443,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992126" visible="true" weight="0.08986731" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992126" visible="true" weight="0.08986731" />
       <window_info id="Structure" order="1" sideWeight="0.5007874" side_tool="true" weight="0.14595899" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -527,7 +533,8 @@
     <MESSAGE value="lots of code cleanup and errors/warnings fixed. rounds won now displays when round ends." />
     <MESSAGE value="fix errors in previous commit" />
     <MESSAGE value="simplify file structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="simplify file structure" />
+    <MESSAGE value="test deployment to apache" />
+    <option name="LAST_COMMIT_MESSAGE" value="test deployment to apache" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

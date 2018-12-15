@@ -30,10 +30,7 @@
 -	User input must be of a valid type
 -	System must be able to handle multiple data sets
 
-
 ## Functional Requirements
-*"Minimum requirements" refer to requirements that must be included in order for the software to be considered a "minimum viable product" (must-haves)*
-
 **1. Two simultaneous head-to-head players:** the system should allow two players to compete simultaneously in the game, taking alternating turns answering trivia questions.
 
 **2. Gather player names:** the system should prompt users to enter their names. Users can enter a string with their device's keyboard, and the game will refer to the player by name in messages for the remainder of the game.
