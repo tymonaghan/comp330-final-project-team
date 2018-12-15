@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class Game {
@@ -19,9 +20,19 @@ class Game {
         //gather and evaluate user responses -- EASY and MEDIUM mode:
         if (myHost.getLevel() == 1 || myHost.getLevel()==2) { // if difficulty is EASY or MEDIUM, show 3x multiple choice options
             QuestionFiles choices = new QuestionFiles("src/content/easyChoices/choices.txt"); // read in the multiple choices for each question
-            myHost.giveChoices(choices, myHost.getQuestionNumber()); //print choices to the user
+            int userResponse=0;
             scanner.nextLine();
-            int userResponse = scanner.nextInt(); //accept user input to answer question
+
+            while (!(userResponse ==1 | userResponse ==2 | userResponse ==3)) {
+                try {
+                    myHost.giveChoices(choices, myHost.getQuestionNumber()); //print choices to the user
+                    userResponse = scanner.nextInt(); //accept user input to answer question
+                } catch(InputMismatchException e){
+                    System.out.println((char)27 + "[7mInvalid input; please enter a number 1-4" + (char)27 + "[27m");
+                }
+                scanner.nextLine(); // clear buffer
+            }
+
             if (myHost.getQuestionNumber() % 2 == 0) {
                 myHost.evaluateQuestion(af, choices, userResponse, playerOne); //evaluate user response (correct/incorrect)
             } else {
@@ -43,7 +54,7 @@ class Game {
             myHost.incrementQuestionNumber(); // move to next question
         } //end if-hard difficulty block
 
-        //print player scores and count down to next quesiton
+        //print player scores and count down to next question
         playerOne.printScore();
         playerTwo.printScore();
         myHost.countdownToNextQuestion();

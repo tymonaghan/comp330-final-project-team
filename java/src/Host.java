@@ -18,15 +18,11 @@ public class Host
     private String userMatchedAnswer;
     private String userChoiceRegex;
 
-    public void incrementQuestionNumber() {
+    public void incrementQuestionNumber(){
         this.questionNumber++;
     }
 
-    public void resetQuestionNumber(){
-        this.questionNumber=0;
-    }
-
-    public int getQuestionNumber() {
+    public int getQuestionNumber(){
         return questionNumber;
     }
 
@@ -65,7 +61,6 @@ public class Host
                 (char)27 + "[33mMedium" + (char)27 + "[0m provides 3 choices for each question and a short timer. \n" +
                 (char)27 + "[31mHard" + (char)27 + "[0m requires users to type their answers (no multiple choice) and has a fast timer.");
     }
-
 
     public void askQuestion(QuestionFiles qf, int lineNo, Player player){
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); //simulate clear console
@@ -212,6 +207,12 @@ public class Host
     }
 
     public int getLevel() { return level; }
+
+    public void resetGame(Player playerOne, Player playerTwo){
+        this.questionNumber=0;
+        playerOne.reset();
+        playerTwo.reset();
+    }
 
     public void quitGame() {
         System.out.println("Thanks for playing! Goodbye.");

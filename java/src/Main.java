@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -14,9 +15,17 @@ public class Main {
         //welcome message
         myHost.displayWelcome(); //welcome/intro message with game name, etc.
 
-        //setup players
-        myHost.askPlayerNumber(); //ask 1 or 2 players?
-        int ans = scanner.nextInt();
+        //ask number of players and instantiate Player objects for them
+        int ans=0;
+        while (!(ans==1 | ans==2)){
+            try{
+                myHost.askPlayerNumber(); //ask 1 or 2 players?
+                ans = scanner.nextInt();
+            } catch (InputMismatchException e){
+                System.out.println((char)27 + "[7mInvalid input; please enter a number 1-4" + (char)27 + "[27m");
+            }
+            scanner.nextLine(); // clear buffer
+        }
         Player playerOne = new Player(); //instantiate gamePlayers with 1 or 2 numPlayers
         Player playerTwo = new Player(ans);
         numPlayers = (ans);
@@ -27,14 +36,28 @@ public class Main {
         }
 
         //set difficulty
-        myHost.askDifficulty(); //ask user to select difficulty 1-3
-        ans = scanner.nextInt(); //accept user's input as int
-        //^^ i think i need to do a catch-type thing here since if the user enters not-an-int it crashes
+        ans = 0;
+        while (!(ans == 1 | ans == 2 | ans == 3 | ans ==4)) {
+            try {
+                myHost.askDifficulty(); //ask user to select difficulty 1-3
+                ans = scanner.nextInt(); //accept user's input as int
+            } catch (InputMismatchException e) {
+                System.out.println((char)27 + "[7mInvalid input; please enter a number 1-4" + (char)27 + "[27m");
+            }
+            scanner.nextLine(); // clears the buffer
+        }  //avoid wrong int inputs like 5, -1, etc. that would throw NullPointerExceptions
+
         if (ans == 4) { //handle user pressing 4 to learn more about difficulty options
             myHost.explainDifficultyOptions();
-            myHost.askDifficulty();
-            scanner.nextLine();
-            ans = scanner.nextInt();
+            while (!(ans == 1 | ans == 2 | ans == 3)) {  //avoid wrong int
+                try {
+                    myHost.askDifficulty(); //ask user to select difficulty 1-3
+                    ans = scanner.nextInt(); //accept user's input as int
+                } catch (InputMismatchException e) {
+                    System.out.println((char) 27 + "[7mInvalid input; please enter a number 1-4" + (char) 27 + "[27m");
+                }
+                scanner.nextLine(); // clear buffer
+            }
         }
         myHost.setDifficulty(ans); //set difficulty according to user response
         System.out.println("Difficulty set to " + myHost.getDifficulty().replace(".txt", "")); //print back to user, omitting ".txt"
@@ -52,7 +75,7 @@ public class Main {
         scanner.nextLine();
         int userResponse = scanner.nextInt();
         if (userResponse == 1) { //if user wants to play again, reset questionNumber
-            myHost.resetQuestionNumber(); // this doesn't work, exits with code 0 (even if it resets the number, triviaGame.run has come and gone by this point in main
+            myHost.resetGame(playerOne, playerTwo); // this doesn't work, exits with code 0 (even if it resets the number, triviaGame.run has come and gone by this point in main
         } else {
             myHost.quitGame(); //but this does work, shows message and then exits with code 0
         }

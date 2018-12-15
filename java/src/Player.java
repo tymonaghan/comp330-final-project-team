@@ -66,6 +66,11 @@ public class Player
         return isHuman;
     }
 
+    void reset(){
+        questionsAttempted=0;
+        questionsCorrect=0;
+    }
+
     public void sayAnswer()
     {
 
