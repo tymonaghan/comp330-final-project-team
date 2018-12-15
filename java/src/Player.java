@@ -24,7 +24,7 @@ public class Player
     }
 
     public void promptForName(String num, Scanner scanner){
-        System.out.println("Player " + num + "Please enter your name:");
+        System.out.println((char)27 + "[33mPlayer " + num + " please enter your name:" + (char)27 +"[0m");
         String nameInput=scanner.next();
         playerName=nameInput;
     }
@@ -36,12 +36,11 @@ public class Player
         questionsAttempted = 0;
         questionsCorrect=0;
         roundsWon = 0;
-        //this.numPlayers = numPlayers;
     }
     public Player(int humanity){ //construct player two depending on 1 or 2-player game
         if (humanity==1){
             isHuman=false;
-            playerName="computadora";
+            playerName="Computadora (CPU)";
         } else {
             isHuman=true;
             playerName="Player Dos";

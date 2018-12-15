@@ -42,11 +42,16 @@ public class Host
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); //simulate clear console
         System.out.println((char)27 + "[7m "+ banner);
         System.out.println((char)27 + "[27mWelcome to 'Trivia of the Union,' the State of the Union quiz game.");
-        System.out.println("Questions will cover State of the Union Addresses from 1981-2017.");
-        System.out.println("Please adjust the size of your console so that the ascii art above displays fully.");
+        System.out.println("Questions cover US Presidents' State of the Union Addresses from 1981-2017.");
+        System.out.println("For the best experience, please adjust the size of your console so that the ascii art above displays fully.\n");
     }
-    public void askDifficulty()
-    {
+
+    public void askPlayerNumber(){
+        //user's response controls how playerTwo is instantiated
+        System.out.println((char)27 + "[33mSelect 1 or 2 players? (press 1 or 2 key)" + (char)27 + "[0m");
+    }
+
+    public void askDifficulty(){
         System.out.println("\nPlease Select a difficulty");
         System.out.println((char)27 + "[32m1: easy");
         System.out.println((char)27 + "[33m2: medium");
@@ -59,13 +64,8 @@ public class Host
                 (char)27 + "[32mEasy" + (char)27 +"[0m provides 3 choices for each question and a generous timer. \n" +
                 (char)27 + "[33mMedium" + (char)27 + "[0m provides 3 choices for each question and a short timer. \n" +
                 (char)27 + "[31mHard" + (char)27 + "[0m requires users to type their answers (no multiple choice) and has a fast timer.");
-
     }
 
-    public void askPlayerNumber(){
-        //user's response controls how playerTwo is instantiated
-        System.out.println("Select 1 or 2 players? (press 1 or 2 key)");
-    }
 
     public void askQuestion(QuestionFiles qf, int lineNo, Player player){
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); //simulate clear console
@@ -73,11 +73,13 @@ public class Host
         String question=qf.ReadFromFile(lineNo);
         System.out.println(question);
     }
+
     public void giveChoices(QuestionFiles choices, int lineNo){ //give player multiple choices (for easy + medium difficulty only)
         String choicez = choices.ReadFromFile(lineNo); //read the line in choices file that corresponds to the question
         System.out.println((char)27+"[0m" + choicez.replaceAll("\\*","\n")); //print out the options, each on their own line
     }
 
+    //for EASY and MEDIUM modes only - assesses multiple choice responses:
     public void evaluateQuestion(QuestionFiles af, QuestionFiles choices, int usersResponse, Player activePlayer) { //assess whether the user answered the question correctly
 
         //read in passed answers/choices
@@ -87,8 +89,10 @@ public class Host
         //print back the user's selection/answer:
         if (usersResponse !=3){
             this.regex = "(?<=" + usersResponse + "\\. )[^,\\n]+(?=[,$])"; //regex for user responses 1-2
+            //RegExplanation: positive lookbehind for "1. " or "2. " depending on user's choice, then match until comma or end of line (as I'm writing this I'm realizing the error of my regex, the different EOL tokens are the issue i bet)
         } else if (usersResponse==3){
-            this.regex= "(?<=3\\. ).+$"; //regex for user response 3 (not sure why one didn't work for all
+            this.regex= "(?<=3\\. ).+$"; //regex for user response 3 (not sure why one didn't work for all)
+            //RegExplanation: positive lookbehind for "3. ", then match any character as many times as possible until end-of-line
         }
         final Pattern regexPattern = Pattern.compile(regex, Pattern.MULTILINE); // compile regex into pattern
         final Matcher matcher = regexPattern.matcher(choiceLine); //run the regex over the choiceLine
@@ -99,17 +103,9 @@ public class Host
 
         //print the correct answer:
         System.out.println((char)27 + "[0mthe correct answer is: " +(char)27 + "[33m"); // print the correct answer
-        /* tried to do a little suspense before revealing the answer, but i didn't like how it was displaying.
-        for (int i =0;i<10;i++){
-            System.out.print("  .  ");
-            try {
-                sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }*/
         System.out.println(answerLine + (char)27 + "[0m\n");
-        try {
+
+        try { //a short delay after showing the correct answer avoids a sudden flood of text faster than the user can read.
             sleep(1500);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -125,16 +121,32 @@ public class Host
             System.out.println((char)27 + "[031mYour answer was incorrect. I award you no points, and may god have mercy on your soul.");
         }
         System.out.println((char)27 + "[0m");
-    }
+    } //end evaluateQuestion EASY/MEDIUM mode
 
-    public void evaluateQuestion(QuestionFiles af, String userResponse, Player activePlayer){
+    // for HARD mode only - assesses string response
+    public void evaluateQuestion(QuestionFiles af, String userResponse, Player activePlayer, QuestionFiles answerMatches){
+        System.out.println(activePlayer.getPlayerName() + ", you answered: " + userResponse);
+        String answerMatchString = answerMatches.ReadFromFile(this.questionNumber);
         String answerLine = af.ReadFromFile(this.questionNumber); //read in the answer
-        System.out.println(activePlayer + ", you answered: " + userResponse);
-
-    }
-
-
-
+        this.regex=".?" + userResponse + ".?";
+        final Pattern regexPattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+        final Matcher matcher = regexPattern.matcher(answerMatchString);
+        System.out.println((char)27 + "[0mthe correct answer is: " +(char)27 + "[33m"); // print the correct answer
+        System.out.println(answerLine);
+        try { //a short delay after showing the correct answer avoids a sudden flood of text faster than the user can read.
+            sleep(1500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if (matcher.find()){ //if user's response is a match (correct):
+            System.out.println((char)27 + "[032mYou are correct! One point for you.");
+            activePlayer.addPoint();
+        } else {
+            System.out.println((char)27 + "[031mYour answer was incorrect. I award you no points, and may god have mercy on your soul.");
+        }
+        System.out.println((char)27 + "[0m");
+        activePlayer.addAttempt();
+    } //end evaluateQuestion HARD mode
 
 
     public void countdownToNextQuestion(){
@@ -154,11 +166,6 @@ public class Host
 
     }
 
-    public void givePoint()
-    {
-        //assign point given correct answer
-    }
-
     public void declareWinner()
     {
         //declare a winner given threshold is met
@@ -169,7 +176,6 @@ public class Host
     {
         //prompt second game
         System.out.println("Would you like to play again? Press 1 for yes, 2 to quit.");
-
     }
 
     public void setDifficulty(int level)
@@ -206,7 +212,6 @@ public class Host
     }
 
     public int getLevel() { return level; }
-
 
     public void quitGame() {
         System.out.println("Thanks for playing! Goodbye.");

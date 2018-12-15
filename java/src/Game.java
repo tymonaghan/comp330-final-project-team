@@ -17,7 +17,6 @@ class Game {
         }
 
         //gather and evaluate user responses -- EASY and MEDIUM mode:
-        System.out.println(myHost.getLevel());
         if (myHost.getLevel() == 1 || myHost.getLevel()==2) { // if difficulty is EASY or MEDIUM, show 3x multiple choice options
             QuestionFiles choices = new QuestionFiles("src/content/easyChoices/choices.txt"); // read in the multiple choices for each question
             myHost.giveChoices(choices, myHost.getQuestionNumber()); //print choices to the user
@@ -32,22 +31,22 @@ class Game {
         } //end if-easy block
 
         else if (myHost.getLevel()==3) { //if difficulty set to HARD, no multi-choice options.
+            QuestionFiles answerMatches = new QuestionFiles("src/content/answers/hardstrings.txt");
             System.out.println("Type your answer and press ENTER");
             scanner.nextLine();
             this.userResponseString = scanner.next();
             if (myHost.getQuestionNumber() % 2 == 0) {
-                myHost.evaluateQuestion(af, userResponseString, playerOne); //evaluate user response (correct/incorrect)
+                myHost.evaluateQuestion(af, userResponseString, playerOne, answerMatches); //evaluate user response (correct/incorrect)
             } else {
-                myHost.evaluateQuestion(af, userResponseString, playerTwo); //evaluate user response (correct/incorrect)
+                myHost.evaluateQuestion(af, userResponseString, playerTwo, answerMatches); //evaluate user response (correct/incorrect)
             }
+            myHost.incrementQuestionNumber(); // move to next question
         } //end if-hard difficulty block
 
-
+        //print player scores and count down to next quesiton
         playerOne.printScore();
         playerTwo.printScore();
         myHost.countdownToNextQuestion();
-
-        //add code for HARD mode
 
     } // end Game.play()
 } //end Game class
