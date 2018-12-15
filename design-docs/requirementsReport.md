@@ -30,7 +30,7 @@ The timer has not yet been implemented - there is no time restriction on players
 >**8a.** "EASY" and "MEDIUM" difficulty: users can press 1, 2, or 3 followed by the ENTER key to submit their response corresponding to the number they pressed.<br>
 >**8b.** "HARD" difficulty: users can type a string into the console and press ENTER to submit their response."
 
-Currently, users are not notified explicitly to "Press 1-3" or "type your answer and press ENTER."
+Currently, users are not notified explicitly to "Press 1-3" on easy/medium, but on hard a "type your answer and press ENTER" message appears.
 
 
 **9. Check user answer:** <br>

@@ -41,7 +41,6 @@ class Game {
         else if (myHost.getLevel()==3) { //if difficulty set to HARD, no multi-choice options.
             QuestionFiles answerMatches = new QuestionFiles("src/content/answers/hardstrings.txt");
             System.out.println("Type your answer and press ENTER");
-            scanner.nextLine();
             String userResponseString = scanner.next();
             if (myHost.getQuestionNumber() % 2 == 0) {
                 myHost.evaluateQuestion(af, userResponseString, playerOne, answerMatches); //evaluate user response (correct/incorrect)

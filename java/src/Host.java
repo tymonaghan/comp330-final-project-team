@@ -181,12 +181,12 @@ public class Host
         playerTwo.printScore();
         if (playerOne.getScore() > playerTwo.getScore()){ //playerOne wins:
             playerOne.addRoundWin();
-            System.out.println((char)27 + "[32m" + playerOne.getPlayerName() + " wins!");
+            System.out.println((char)27 + "[32m\n" + playerOne.getPlayerName() + " wins!" + (char)27 + "[0m\n");
         } else if (playerOne.getScore() < playerTwo.getScore()){ //playerTwo wins:
             playerTwo.addRoundWin();
-            System.out.println((char)27 + "[32m" + playerTwo.getPlayerName() + " wins!");
+            System.out.println((char)27 + "[32m\n" + playerTwo.getPlayerName() + " wins!" + (char)27 + "[0m\n");
         } else { //a tie:
-            System.out.println("Tie game!");
+            System.out.println("\nTie game!\n");
         }
         System.out.println(playerOne.getPlayerName() + "'s rounds won:" + playerOne.getRoundsWon());
         System.out.println(playerTwo.getPlayerName() + "'s rounds won:" + playerTwo.getRoundsWon());
@@ -195,7 +195,7 @@ public class Host
     void playAgain()
     {
         //prompt second game
-        System.out.println("Would you like to play again? Press 1 for yes, or 2 to quit.");
+        System.out.println((char)27 + "[33m\nWould you like to play again? Press 1 for yes, or 2 to quit.");
     }
 
     void setDifficulty(int level){
