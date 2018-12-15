@@ -53,7 +53,7 @@ The system clearly displays whose turn it is each time it asks a question. This 
 The system correctly identifies when the questionLimit has been reached, prints a message informing the user that the round is over (`The game is over!`), and prints a statement about the winner (`playerOne wins!`)
 
 **15. Prompt for rematch/end of game:** <br>
-Immediately after displaying the winner, the system prints a message asking players to press 1 to play again or 2 to exit. Pressing 1 does not properly reset the game as of now, and generally leads to a code-0 exit. Pressing 2 prints a message ("Thank you for playing, goodbye!") to the user and then exits with code 0.
+Immediately after displaying the winner, the system prints a message asking players to press 1 to play again or 2 to exit. Pressing 1 does not properly reset the game as of now, and generally leads to a code-0 exit. Pressing 2 prints a message (`Thank you for playing, goodbye!`) to the user and then exits with code 0.
 
 **16. Use natural-language processing to generate trivia questions:** <br>
-We have not integrated the coreNLP or any other NLP library into our Java software. Instead, text mining tools like Voyant-tools.org and www.sotu-db.com were used to generate a sample set of questions, which are currently the same for every round of Trivia of the Union.
+We have not integrated the coreNLP or any other NLP library into our Java software. Instead, text mining tools like www.Voyant-tools.org and www.sotu-db.com were used to generate a sample set of questions, which are currently the same for every round of Trivia of the Union.

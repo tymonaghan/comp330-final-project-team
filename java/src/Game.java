@@ -2,11 +2,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class Game {
-    String userResponseString;
-    public Game() {
+    Game() {
     } //end Game() constructor
 
-    public void play(Host myHost, Scanner scanner, Player playerOne, Player playerTwo) {
+    void play(Host myHost, Scanner scanner, Player playerOne, Player playerTwo) {
         //read in question and answer files"
         QuestionFiles qf = new QuestionFiles("src/content/questions/" + myHost.getDifficulty());
         QuestionFiles af = new QuestionFiles("src/content/answers/answers.txt");
@@ -43,7 +42,7 @@ class Game {
             QuestionFiles answerMatches = new QuestionFiles("src/content/answers/hardstrings.txt");
             System.out.println("Type your answer and press ENTER");
             scanner.nextLine();
-            this.userResponseString = scanner.next();
+            String userResponseString = scanner.next();
             if (myHost.getQuestionNumber() % 2 == 0) {
                 myHost.evaluateQuestion(af, userResponseString, playerOne, answerMatches); //evaluate user response (correct/incorrect)
             } else {
@@ -56,6 +55,5 @@ class Game {
         playerOne.printScore();
         playerTwo.printScore();
         myHost.countdownToNextQuestion();
-
     } // end Game.play()
 } //end Game class

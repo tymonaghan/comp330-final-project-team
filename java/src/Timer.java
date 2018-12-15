@@ -1,20 +1,16 @@
+/* this class not used (yet)
 public class Timer
-{
 
+{
 
     private int UPPER_BOUND = 0;
     Host minTime = new Host();
-    //Players player = new Players();
-
-
     private long currTime;
-
 
     public void setUpperBound()
     {
         UPPER_BOUND = minTime.getTime();
     }
-
 
     public void startTimer()
     {
@@ -29,12 +25,6 @@ public class Timer
             startTimer();
             //recursively counts seconds
         }
-
     }
-
-
-
-
-
-
 }
+ */
