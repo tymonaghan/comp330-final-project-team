@@ -32,56 +32,48 @@
 
 
 ## Functional Requirements
-
-### Minimum Requirements:
 *"Minimum requirements" refer to requirements that must be included in order for the software to be considered a "minimum viable product" (must-haves)*
 
-1. **Two simultaneous head-to-head players:** the system should allow two players to compete simultaneously in the game.
+**1. Two simultaneous head-to-head players:** the system should allow two players to compete simultaneously in the game, taking alternating turns answering trivia questions.
 
-2. **Indicate player turn:** by default, player 1 answers the first question, and play alternates with each question. After five questions for each player, the round is over (see requirement 8).
+**2. Gather player names:** the system should prompt users to enter their names. Users can enter a string with their device's keyboard, and the game will refer to the player by name in messages for the remainder of the game.
 
-3. **Display trivia questions:** the system should randomly choose a trivia question to display to the players.
-> 3a. optionally, the system should choose the trivia question based on the chosen difficulty level of the game (see requirement 10)
+**3. Gather difficulty level:** the system should prompt users to select EASY, MEDIUM, or HARD difficulty.
 
-4. **Accept user input/answer selection:** Once the question is displayed, the system should prompt the user to input their response. *(We should choose an answer method from 4a-4c below, or make clear which will be used under what conditions)*
->4a. the software displays a list of possible "multiple choice" responses along with the question. The player who buzzes in selects from these responses.
->4b. the software displays a list of possible "multiple choice" responses only after a user has buzzed in. The user then selects from these responses.
->4c. the software accepts a typed String as input from the user.
+**4. Indicate player turn:** the system must display to users whether it is currently player 1 or player 2's turn. By default, player 1 answers the first question, and play alternates with each question. After five questions for each player, the round is over (see requirement 8).
 
-5. **Check user answer:** once a player has responded to the question, the software performs a check *(specific method will depend on implementation of requirement 4)* to determine whether the player's response was correct.
+**5. Display trivia questions:** On each turn, the system should randomly choose a trivia question to display to the player whose turn is currently being taken.
 
-6. **Assign points:** if the player's answer is deemed correct, points are added to that player's score.
+**6. Display multiple choice options:** After asking the question, display three possible choices to the user (note: does not apply to HARD difficulty).
+
+**7. Question timer:** players will have a limited time (indicated on-screen) in which to answer the question. If time expires before the player responds, it counts as an incorrect answer.
+
+**8. Accept user input/answer selection:** Once the question is displayed, the system should prompt the user to input their response.
+>**8a.** on "EASY" and "MEDIUM" difficulty, the software displays a list of possible "multiple choice" responses along with the question. The user presses key 1, 2, or 3 to select the corresponding answer displayed on screen. <br>
+>**8b.** on "HARD" difficulty, the software accepts a typed String as input from the user.
+
+**9. Check user answer:** once a player has responded to the question, the software performs a check to determine whether the player's response was correct. The system will display a message indicating whether the user's response is correct or incorrect.
+>**9a.** on EASY and MEDIUM difficulty, regular expressions are used to match the user's input (1, 2, or 3) to the first character of an "answers.txt" file
+>**9b.** on HARD difficulty, regular expressions are used to determine whether the user's string appears in the line of a "hardstrings.txt" text file, optimized for this task
+
+**10. Display question outcome (correct/incorrect):** the system should display to the user whether they answered the question correctly or incorrectly, in plain language (e.g. "PlayerOne, your answer was incorrect.") based on the results of requirement 7.
+
+**11. Assign points:** if the player's answer is deemed correct, points are added to that player's score.
 >tbd: are different questions worth different amounts of points?
 
-7. **Alternate player turns:** once a player has answered their question, the system should indicate that it is now the opposite player's turn.
+**12. Display scoreboard:** the users' names and current scores should be displayed on the screen after each question is answered, reflecting the points earned (if any) from the most recently-asked question.
 
-8. **Indicate end of round and award winner:** after each player has answered five questions, the game will print a message that the round has ended and indicate the winner of the round.
+**13. Alternate player turns:** once a player has answered their question, the system should indicate that it is now the opposite player's turn. This brings the user back to requirement 4, and users alternate completing the steps in requirements 4-11 until the round ends (when a set number of questions have been asked, currently set to ten).
 
-9. **Prompt for rematch/end of game:** after a round has ended and a winner is declared, the software should provide users with the option to "rematch" (start a new game) or "exit" (terminate the software)
->9a. if user aliases are implemented, another option could be to start a new game with different players (instead of the same two players, as in the case of a rematch)
+**14. Indicate end of round and award winner:** after each player has answered five questions, the game will print a message that the round has ended and indicate the winner of the round in plain language (e.g. "Congratulations playerOne, you won the game!").
 
+**15. Prompt for rematch/end of game:** after a round has ended and a winner is declared, the software should provide users with the option to "rematch" (start a new game) or "exit" (terminate the software)
 
-### Preferred Requirements:
-*"Preferred requirements" refer to requirements that may or may not be implemented in the final code, and are not required to reach "minimum viable product," but are nevertheless desirable (should-haves)*
-
-10. **Selectable difficulty level:** players can choose from multiple difficulty levels which will change which questions are asked in the game.
-
-11. **Listen for users to "buzz in:"** rather than simply alternating users, the software could listen for keypresses and allow users to "buzz in" to see who can answer the question more quickly (similar to Jeopardy!)
-
-12. **Deduct points for incorrect responses:** the software will remove points from the player's score if the player provides an incorrect answer.
-
-13. **Allow a player to steal:** when a player answers a question incorrectly (or timer expires, if requirement 14 is implemented), the game gives the other player the option to "steal" those points by correctly answering the question.
-
-14. **Question timer:** players will have a limited time (indicated on-screen) in which to answer the question. If time expires before the player responds, it counts as an incorrect answer.
-
-14. **Allow player aliases:** collect usernames from each player and refer to them by these, rather than just "player 1" and "player 2"
-
-15. **Display scoreboard:** the users' names and current scores should be displayed on the screen at all times
-
-16. **Use natural-language processing to generate trivia questions:** the trivia questions in the software's database will be based on the corpus of "State of the Union" texts compiled by the "SOTU-db" project
+**16. Use natural-language processing to generate trivia questions:** the trivia questions in the software's database will be based on the corpus of "State of the Union" texts compiled by the "SOTU-db" project
 
 ## Tools Used
-- **[Python, NLTK library:](https://www.nltk.org/)** natural language processing of texts
-- **R, RStudio (IDE), tm, tidyverse packages** natural language processing of texts
 - **GitHub** version control
 - **BaseCamp** team communication
+- **IDEA IntelliJ** Java IDE
+- **[Python, NLTK library:](https://www.nltk.org/)** natural language processing of texts
+- **R, RStudio (IDE), tm, tidyverse packages** natural language processing of texts
