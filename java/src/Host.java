@@ -126,6 +126,17 @@ public class Host
         }
         System.out.println((char)27 + "[0m");
     }
+
+    public void evaluateQuestion(QuestionFiles af, String userResponse, Player activePlayer){
+        String answerLine = af.ReadFromFile(this.questionNumber); //read in the answer
+        System.out.println(activePlayer + ", you answered: " + userResponse);
+
+    }
+
+
+
+
+
     public void countdownToNextQuestion(){
         //countdown to next question (should skip this when game is over):
         System.out.println((char)27 + "[0m\n\nNext question in");
@@ -165,16 +176,19 @@ public class Host
     {
         if(level == 1)
         {
+            this.level=1;
             difficulty = "easy.txt";
             time = 100000;
         }
         else if(level == 2)
         {
+            this.level=2;
             difficulty = "medium.txt";
             time = 30000;
         }
         else if(level == 3)
         {
+            this.level=3;
             difficulty = "hard.txt";
             time = 30000;
 
