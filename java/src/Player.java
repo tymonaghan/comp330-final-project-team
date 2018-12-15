@@ -54,6 +54,10 @@ public class Player
         System.out.println(playerName + "'s score: "+ questionsCorrect + " (out of " + questionsAttempted +" attempted)");
     }
 
+    int getScore(){
+        return questionsCorrect;
+    }
+
     void addAttempt(){
         questionsAttempted++;
     }
@@ -71,24 +75,8 @@ public class Player
         questionsCorrect=0;
     }
 
-    public void sayAnswer()
-    {
-
-    }
-
-    public void stealTurn()
-    {
-
-    }
-
-    public void skipTurn()
-    {
-
-    }
-
-    public void leaveGame()
-    {
-
+    int getRoundsWon(){
+        return roundsWon;
     }
 
 

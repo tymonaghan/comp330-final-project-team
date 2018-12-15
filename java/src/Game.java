@@ -21,8 +21,6 @@ class Game {
         if (myHost.getLevel() == 1 || myHost.getLevel()==2) { // if difficulty is EASY or MEDIUM, show 3x multiple choice options
             QuestionFiles choices = new QuestionFiles("src/content/easyChoices/choices.txt"); // read in the multiple choices for each question
             int userResponse=0;
-            scanner.nextLine();
-
             while (!(userResponse ==1 | userResponse ==2 | userResponse ==3)) {
                 try {
                     myHost.giveChoices(choices, myHost.getQuestionNumber()); //print choices to the user

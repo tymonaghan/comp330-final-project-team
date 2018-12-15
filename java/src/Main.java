@@ -70,7 +70,7 @@ public class Main {
         }
 
         //end-of-round functions, when questionLimit is reached
-        myHost.declareWinner(); //announce the winner of the round
+        myHost.declareWinner(playerOne, playerTwo); //announce the winner of the round
         myHost.playAgain(); //ask whether to play again
         scanner.nextLine();
         int userResponse = scanner.nextInt();
@@ -79,5 +79,5 @@ public class Main {
         } else {
             myHost.quitGame(); //but this does work, shows message and then exits with code 0
         }
-    }
-}
+    } //end main
+} //end Main

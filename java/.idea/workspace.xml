@@ -7,12 +7,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddfc89cd-62e4-4895-a383-87a2853652a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../design-docs/Use Case Narratives First Draft.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../design-docs/images/wordcloud-1862.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../design-docs/questions-ideas.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../design-docs/resource-links.md" beforeDir="false" afterPath="$PROJECT_DIR$/../design-docs/resource-links.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../design-docs/trivia-questions.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Host.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Host.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/easyChoices/choices.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/easyChoices/choices.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/questions/easy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/questions/easy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/questions/hard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/questions/hard.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/questions/medium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/questions/medium.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/trivia-of-the-union/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/trivia-of-the-union/QuestionFiles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/trivia-of-the-union/Timer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/trivia-of-the-union/content/answers/easy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/trivia-of-the-union/content/answers/hard.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/trivia-of-the-union/content/answers/medium.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/trivia-of-the-union/content/easyChoices/choices.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/trivia-of-the-union/content/questions/easy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/trivia-of-the-union/content/questions/hard.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/trivia-of-the-union/content/questions/medium.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/trivia-of-the-union/host.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/trivia-of-the-union/players.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,27 +53,27 @@
     <session id="-1504894709">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="3" />
+          <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="19375" />
+          <entry key="java" value="20973" />
           <entry key="regexp" value="22" />
-          <entry key="txt" value="1194" />
+          <entry key="txt" value="1269" />
           <entry key="xml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="19375" />
-          <entry key="PLAIN_TEXT" value="1194" />
+          <entry key="JAVA" value="20973" />
+          <entry key="PLAIN_TEXT" value="1269" />
           <entry key="RegExp" value="22" />
           <entry key="XML" value="13" />
         </counts>
@@ -62,7 +82,7 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="14" />
+          <entry key="java" value="17" />
           <entry key="regexp" value="1" />
           <entry key="txt" value="7" />
           <entry key="xml" value="2" />
@@ -72,7 +92,7 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="14" />
+          <entry key="JAVA" value="17" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="RegExp" value="1" />
           <entry key="XML" value="2" />
@@ -84,83 +104,81 @@
     <favorites_list name="sotuTrivia" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.3968637">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="419">
-                  <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/QuestionFiles.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Host.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="490">
-                  <caret line="214" column="5" selection-start-line="214" selection-start-column="5" selection-end-line="214" selection-end-column="5" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#620#621#0" expanded="true" />
-                    <element signature="e#657#658#0" expanded="true" />
-                    <element signature="e#699#700#0" expanded="true" />
-                    <element signature="e#736#737#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Player.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Timer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Game.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="78" column="25" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
+              <folding>
+                <element signature="e#1585#1586#0" expanded="true" />
+                <element signature="e#1624#1625#0" expanded="true" />
+                <element signature="e#1902#1903#0" expanded="true" />
+                <element signature="e#1933#1934#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Timer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="77" column="177" lean-forward="true" selection-start-line="77" selection-start-column="177" selection-end-line="77" selection-end-column="177" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-178">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/QuestionFiles.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Host.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1318">
+              <caret line="194" column="77" selection-start-line="194" selection-start-column="77" selection-end-line="194" selection-end-column="77" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#10678#10679#0" expanded="true" />
+                <element signature="e#10711#10712#0" expanded="true" />
+                <element signature="e#10743#10744#0" expanded="true" />
+                <element signature="e#10770#10771#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -199,8 +217,8 @@
         <option value="$PROJECT_DIR$/src/Players.java" />
         <option value="$PROJECT_DIR$/src/Playerr.java" />
         <option value="$PROJECT_DIR$/src/QuestionFiles.java" />
-        <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/Player.java" />
         <option value="$PROJECT_DIR$/src/Host.java" />
       </list>
@@ -223,17 +241,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="sotuTrivia" type="b2602c69:ProjectViewProjectNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sotuTrivia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sotuTrivia" type="b2602c69:ProjectViewProjectNode" />
@@ -249,7 +263,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -261,7 +274,7 @@
     <property name="SearchEverywhereHistoryKey" value="artifacts&#9;FILE&#9;jar://C:/Program Files/JetBrains/IntelliJ IDEA Community Edition 2018.2.4/lib/openapi.jar!/com/intellij/packaging/artifacts" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544867104458" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544872541775" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last.edited.regexp" value="*1. Reagan, *2. Clinton, *3. H.W. Bush" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/java_jar" />
@@ -388,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544863856544</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add lots of InputTypeMismatch catches for user inputs">
+      <created>1544867143272</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1544867143272</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -407,7 +427,7 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992126" weight="0.08986731" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992126" visible="true" weight="0.08986731" />
       <window_info id="Structure" order="1" sideWeight="0.5007874" side_tool="true" weight="0.14595899" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -417,15 +437,15 @@
       <window_info id="Favorites" order="7" sideWeight="0.5007874" side_tool="true" weight="0.14595899" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32911393" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.46200243" visible="true" weight="0.30840045" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.45958987" visible="true" weight="0.30840045" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49939686" weight="0.32911393" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49879372" weight="0.32911393" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49819058" weight="0.32911393" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49879372" weight="0.26927504" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5379976" side_tool="true" visible="true" weight="0.30840045" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.54041016" side_tool="true" visible="true" weight="0.30840045" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.40651387" weight="0.24741082" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -491,7 +511,8 @@
     <MESSAGE value="now prompts users to enter names, checks answers, and keeps score" />
     <MESSAGE value="begin implementing control flow and answer-checking for HARD difficulty (in-progress..)" />
     <MESSAGE value="hard mode string-matching now functional" />
-    <option name="LAST_COMMIT_MESSAGE" value="hard mode string-matching now functional" />
+    <MESSAGE value="add lots of InputTypeMismatch catches for user inputs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add lots of InputTypeMismatch catches for user inputs" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -523,13 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/QuestionFiles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Timer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -537,17 +551,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuestionFiles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
+        <state relative-caret-position="349">
+          <caret line="78" column="25" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
+          <folding>
+            <element signature="e#1585#1586#0" expanded="true" />
+            <element signature="e#1624#1625#0" expanded="true" />
+            <element signature="e#1902#1903#0" expanded="true" />
+            <element signature="e#1933#1934#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="77" column="177" lean-forward="true" selection-start-line="77" selection-start-column="177" selection-end-line="77" selection-end-column="177" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        <state relative-caret-position="-178">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -556,24 +593,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Host.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="214" column="5" selection-start-line="214" selection-start-column="5" selection-end-line="214" selection-end-column="5" />
+        <state relative-caret-position="1318">
+          <caret line="194" column="77" selection-start-line="194" selection-start-column="77" selection-end-line="194" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#620#621#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#10678#10679#0" expanded="true" />
+            <element signature="e#10711#10712#0" expanded="true" />
+            <element signature="e#10743#10744#0" expanded="true" />
+            <element signature="e#10770#10771#0" expanded="true" />
           </folding>
         </state>
       </provider>
