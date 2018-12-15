@@ -7,8 +7,8 @@ class Game {
 
     void play(Host myHost, Scanner scanner, Player playerOne, Player playerTwo) {
         //read in question and answer files"
-        QuestionFiles qf = new QuestionFiles("src/content/questions/" + myHost.getDifficulty());
-        QuestionFiles af = new QuestionFiles("src/content/answers/answers.txt");
+        QuestionFiles qf = new QuestionFiles("src/content/" + myHost.getDifficulty());
+        QuestionFiles af = new QuestionFiles("src/content/answers.txt");
         //ask questions, alternating p1 and p2
         if (myHost.getQuestionNumber() % 2 == 0) {
             myHost.askQuestion(qf, myHost.getQuestionNumber(), playerOne); // myHost asks the question on line number questionNumber to playerOne
@@ -18,7 +18,7 @@ class Game {
 
         //gather and evaluate user responses -- EASY and MEDIUM mode:
         if (myHost.getLevel() == 1 || myHost.getLevel()==2) { // if difficulty is EASY or MEDIUM, show 3x multiple choice options
-            QuestionFiles choices = new QuestionFiles("src/content/easyChoices/choices.txt"); // read in the multiple choices for each question
+            QuestionFiles choices = new QuestionFiles("src/content/choices.txt"); // read in the multiple choices for each question
             int userResponse=0;
             while (!(userResponse ==1 | userResponse ==2 | userResponse ==3)) {
                 try {
@@ -39,7 +39,7 @@ class Game {
         } //end if-easy block
 
         else if (myHost.getLevel()==3) { //if difficulty set to HARD, no multi-choice options.
-            QuestionFiles answerMatches = new QuestionFiles("src/content/answers/hardstrings.txt");
+            QuestionFiles answerMatches = new QuestionFiles("src/content/hardstrings.txt");
             System.out.println("Type your answer and press ENTER");
             String userResponseString = scanner.next();
             if (myHost.getQuestionNumber() % 2 == 0) {
