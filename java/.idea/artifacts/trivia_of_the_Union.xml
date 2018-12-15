@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="apk" name="trivia of the Union">
+    <output-path>$PROJECT_DIR$/out/artifacts/trivia_of_the_Union</output-path>
+    <properties id="android-properties">
+      <options>
+        <option name="keyStoreUrl" value="file://" />
+      </options>
+    </properties>
+    <root id="archive" name="trivia of the Union.apk">
+      <element id="artifact" artifact-name="java:jar" />
+    </root>
+  </artifact>
+</component>
