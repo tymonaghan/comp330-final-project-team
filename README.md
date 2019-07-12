@@ -8,27 +8,16 @@
 - Tyler Monaghan
 
 ## Overview
-"Trivia of the Union" is a trivia quiz game. It uses the corpus of US Presidents' "State of the Union" addresses collected by the [SOTU-db project](http://gitpages.sotu-db.com) to generate questions. Two players compete to see who can answer the most correct questions in a round. Language-processing tools like text mining with R and the NLTK (natural language toolkit) Python library will be used to programmatically generate questions (for example, "which President had the longest average sentences").
+"Trivia of the Union" is a trivia quiz game. It uses the corpus of US Presidents' "State of the Union" addresses collected by the [SOTU-db project](http://www.sotu-db.com) to generate questions. Two players compete to see who can answer the most correct questions in a round. Language-processing tools like text mining with R and the NLTK (natural language toolkit) Python library will be used to programmatically generate questions (for example, "which President had the longest average sentences").***
+
+
+*** *please note: the natural language processing and text mining aspects of this program have not been implemented. In the below requirements, those followed by the three asterisks have not yet been implemented ***
 ## Implementation Objectives
 #### Key Objectives:
 - To complete the project using an object oriented approach
 - To follow Programmatic philosophies SoC and loose coupling
 - Create a dynamic system that will be able to change itself at runtime
 - Achieve a greater understanding of turn based systems and how Actors should interact
-
-#### Program Requirements:
-- Program must be built using java or a java-based framework
--	Program must terminate gracefully
--	Program must have clear parameter indicating when termination is necessary
--	Program must consider all possible outcomes A winner, A loser, A tie
--	Program must hold the user to a set of rules
--	Program must handle breaking of rules gracefully
-
-#### Data Requirements:
--	Program must keep a reference to every instance of user input
--	User input must be archived to eliminate redundancy
--	User input must be of a valid type
--	System must be able to handle multiple data sets
 
 ## Functional Requirements
 **1. Two simultaneous head-to-head players:** the system should allow two players to compete simultaneously in the game, taking alternating turns answering trivia questions.
@@ -66,7 +55,7 @@
 
 **15. Prompt for rematch/end of game:** after a round has ended and a winner is declared, the software should provide users with the option to "rematch" (start a new game) or "exit" (terminate the software)
 
-**16. Use natural-language processing to generate trivia questions:** the trivia questions in the software's database will be based on the corpus of "State of the Union" texts compiled by the "SOTU-db" project
+**16. Use natural-language processing to generate trivia questions:** the trivia questions in the software's database will be based on the corpus of "State of the Union" texts compiled by the "SOTU-db" project***
 
 ## Tools Used
 - **GitHub** version control
